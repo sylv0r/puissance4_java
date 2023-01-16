@@ -4,7 +4,7 @@ import com.codingf.player.Player;
 
 public class Token {
     //champ
-    private char tokenChar;
+    public char tokenChar;
     private Player owner;
 
     //constructor

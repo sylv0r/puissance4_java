@@ -1,9 +1,7 @@
 package com.codingf.grid;
 
-
-import java.util.Scanner;
-
-import static com.codingf.input.Input.readInt;
+import com.codingf.game.Game;
+import com.codingf.player.Player;
 
 public class Grid {
 
@@ -37,7 +35,21 @@ public class Grid {
         return sb.toString();
     }
 
-    public static void main(String[] args) {
+
+    public static void place(char[][] grid, int result, Game game, Player currentPlayer) {
+        for (int i = 5; i >= 0; i--) {
+            if (grid[i][result - 1] == '@' || grid[i][result - 1] == '=') {
+            } else {
+                grid[i][result - 1] = game.actualPlayer(currentPlayer);
+                System.out.println(generateGridString(grid));
+
+                break;
+            }
+        }
+    }
+
+
+    public static char[][] generateGridSpace() {
         char[][] grid = new char[6][7];
 
         // Initialize grid with empty spaces
@@ -46,45 +58,17 @@ public class Grid {
                 grid[i][j] = ' ';
             }
         }
-
-
-        // Example: set some grid spaces to 'X' and 'O'
-        grid[5][0] = '=';
-
-        // Print the grid
-        System.out.println(generateGridString(grid));
-
-        String name;
-
-        int result = -1;
-
-        Scanner console = new Scanner(System.in);
-
-        while(true) {
-            System.out.print("colone :  ");
-            name = console.nextLine();
-            result = Integer.parseInt(name);
-
-            for (int i = 5; i >= 0; i--) {
-                if (grid[i][result - 1] == '@' || grid[i][result - 1] == '=') {
-
-                } else {
-                    grid[i][result - 1] = '@';
-                    break;
-                }
-            }
-
-
-            System.out.println(generateGridString(grid));
-
-        }
+        return grid;
     }
 
 
-
-
-
 }
+
+
+
+
+
+
 
 
 
