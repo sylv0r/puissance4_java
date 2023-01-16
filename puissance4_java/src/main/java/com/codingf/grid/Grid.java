@@ -1,8 +1,14 @@
 package com.codingf.grid;
 
 
+import java.util.Scanner;
+
+import static com.codingf.input.Input.readInt;
 
 public class Grid {
+
+
+    int age;
     public static String generateGridString(char[][] grid) {
         StringBuilder sb = new StringBuilder();
         for (int j = 0; j < 7; j++) {
@@ -40,17 +46,44 @@ public class Grid {
                 grid[i][j] = ' ';
             }
         }
-        for (int i = 0; i < 6; i++) {
-            grid[i][0] = '.';
 
-        }
 
         // Example: set some grid spaces to 'X' and 'O'
-        grid[5][6] = '=';
+        grid[5][0] = '=';
 
         // Print the grid
         System.out.println(generateGridString(grid));
+
+        String name;
+
+        int result = -1;
+
+        Scanner console = new Scanner(System.in);
+
+        while(true) {
+            System.out.print("colone :  ");
+            name = console.nextLine();
+            result = Integer.parseInt(name);
+
+            for (int i = 5; i >= 0; i--) {
+                if (grid[i][result - 1] == '@' || grid[i][result - 1] == '=') {
+
+                } else {
+                    grid[i][result - 1] = '@';
+                    break;
+                }
+            }
+
+
+            System.out.println(generateGridString(grid));
+
+        }
     }
+
+
+
+
+
 }
 
 
