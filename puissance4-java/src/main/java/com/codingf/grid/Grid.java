@@ -1,4 +1,4 @@
-package com.codingf.grid;
+package com.codingf.java.util.Scanner.grid;
 
 
 
