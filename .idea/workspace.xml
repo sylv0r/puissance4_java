@@ -1,43 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d21b7f68-30fd-466f-9626-75d2fc918a81" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/puissance4_java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Token.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/joueur/Joueur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/top10/Top10.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/grid/Grid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/joueur/Joueur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/top10/Top10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf/game/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf/grid/Grid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf/grid/Token.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf/input/Input.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf/player/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/target/classes/com/codingf/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/target/classes/com/codingf/game/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/target/classes/com/codingf/grid/Grid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/target/classes/com/codingf/grid/Token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/target/classes/com/codingf/input/Input.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4_java/target/classes/com/codingf/player/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/winCondition/Flo.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/winCondition/Flo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +25,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sylvian/Documents/GitHub/puissance4_java/puissance4_java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/florianrichet/Desktop/01-Ecole/05-Java/puissance4/puissance4_java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf" />
@@ -96,8 +75,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673959641542</updated>
+      <workItem from="1673986751978" duration="2849000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
