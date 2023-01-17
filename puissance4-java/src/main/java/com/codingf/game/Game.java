@@ -6,6 +6,7 @@ import com.codingf.grid.Grid;
 import com.codingf.ia.Ia1;
 import com.codingf.input.Input;
 import com.codingf.player.Player;
+import com.codingf.winCondition.Flo;
 
 
 import java.util.Scanner;
@@ -59,8 +60,6 @@ public class Game {
 
             name = console.nextLine();
 
-
-
             try {
                 result = Integer.parseInt(name);
                 if (!Input.verrifInput(result)){
@@ -80,6 +79,13 @@ public class Game {
 
 
             grid.place(grille,result,game, this.currentPlayer);
+
+            if (Flo.winConditionVertical(grille)){
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            }
+
+
             swapTurn();
 
 
