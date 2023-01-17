@@ -1,4 +1,4 @@
-package com.codingf.java.util.Scanner;
+package com.codingf;
 import java.util.Scanner;
 
 class Main {

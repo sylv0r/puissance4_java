@@ -1,8 +1,20 @@
-package com.codingf.java.util.Scanner.grid;
+package com.codingf.grid;
 
 
 
-public class Grid {
+public class
+
+
+
+
+
+
+
+
+
+
+
+Grid {
     public static String generateGridString(char[][] grid) {
         StringBuilder sb = new StringBuilder();
         for (int j = 0; j < 7; j++) {
