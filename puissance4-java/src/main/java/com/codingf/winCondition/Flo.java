@@ -1,4 +1,4 @@
-package com.codingf;
+package com.codingf.winCondition;
 
 
 public class Flo {
@@ -12,7 +12,7 @@ public class Flo {
     static int j = 0;
     static int i = 0;
 
-    static char[][] grid = new char[6][7];
+
 
 
     static boolean Fuite = false;
@@ -76,26 +76,27 @@ public class Flo {
 */
 
         // DEBUT WINS CONDITIONS VERTICALES
-    public static boolean winConditionVertical() {
+    public static boolean winConditionVertical(char[][] grid) {
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
         for (j = 0; j < 7; j++) {
             win1x = 0;
             win1a = 0;
             for (i = 0; i < 6; i++) {
-                if (grid[i][j] == 'A' && Fuite == false) {
+                if (grid[i][j] == '@' && Fuite == false) {
+                    System.out.println("@@@@@@@@@@@@@@@@@@@@@");
                     win1x = 0;
                     win1a = win1a + 1;
                     return winConditionV();
                 } else {
-                    if (grid[i][j] == 'X' && Fuite == false) {
+                    if (grid[i][j] == '=' && Fuite == false) {
+                        System.out.println("===========");
+
                         win1a = 0;
                         win1x = win1x + 1;
                         return winConditionV();
                     } else {
                         if (grid[i][j] == ' ') {
-                        } else {
-
                         }
-
                     }
                 }
             }
@@ -111,7 +112,7 @@ public class Flo {
         // FIN DES WINS CONDITIONS HORIZONTALES
 
         // DEBUT WINS CONDITIONS DIAGONALES
-        private static boolean winConditionHorizontale(){
+        private static boolean winConditionHorizontale(char[][] grid){
             for ( i = 0; i < 6; i++) {
                 win2x = 0;
                 win2a = 0;
@@ -155,10 +156,14 @@ public class Flo {
     }*/
 
     private static boolean winConditionV() {
+        System.out.println("winconditionV");
+        System.out.println(win1a);
+        System.out.println(win1x);
+
         if (win1a == 4 || win1x == 4) {
             System.out.println("Victoire sur la ligne verticale " + (j + 1));
             Fuite = true;
-            return Fuite;
+            return true;
 
         }
         return false;
@@ -173,7 +178,7 @@ public class Flo {
         return false;
     }
 
-    private static boolean winConditionDABD() {
+    private static boolean winConditionDABD(char[][] grid) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDABD = 0;
@@ -196,7 +201,7 @@ public class Flo {
 
 
 
-    private static boolean winConditionDXBD() {
+    private static boolean winConditionDXBD(char[][] grid) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDXBD = 0;
@@ -216,7 +221,7 @@ public class Flo {
         }
         return false;
     }
-    private static boolean winConditionDABG() {
+    private static boolean winConditionDABG(char[][] grid) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDABG = 0;
@@ -237,7 +242,7 @@ public class Flo {
         return false;
     }
 
-    private static boolean winConditionDXBG() {
+    private static boolean winConditionDXBG(char[][] grid) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDXBG = 0;
@@ -258,7 +263,7 @@ public class Flo {
         return false;
     }
 
-    private static boolean winConditionDAHD() {
+    private static boolean winConditionDAHD(char[][] grid) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDAHD = 0;
@@ -281,7 +286,7 @@ public class Flo {
 
 
 
-    private static boolean winConditionDXHD() {
+    private static boolean winConditionDXHD(char[][] grid) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDXHD = 0;
@@ -301,7 +306,7 @@ public class Flo {
         }
         return false;
     }
-    private static boolean winConditionDAHG() {
+    private static boolean winConditionDAHG(char[][] grid) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDAHG = 0;
@@ -322,7 +327,7 @@ public class Flo {
         return false;
     }
 
-    private static boolean winConditionDXHG() {
+    private static boolean winConditionDXHG(char[][] grid) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDXHG = 0;
