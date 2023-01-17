@@ -1,3 +1,0 @@
-Zineb: 10
-Julien: 39
-Alexandre: 123
