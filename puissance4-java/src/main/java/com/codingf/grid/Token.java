@@ -1,29 +1,26 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.codingf.grid;
 
 import com.codingf.player.Player;
 
 public class Token {
-    //champ
     public char tokenChar;
     private Player owner;
-
-    //constructor
 
     public Token(char c, Player player) {
         this.tokenChar = c;
         this.owner = player;
-
     }
-    //getters || setters
-
 
     public Player getOwner() {
-        return owner;
+        return this.owner;
     }
 
-    //methode
-    @Override
-    public String toString(){
+    public String toString() {
         return Character.toString(this.tokenChar);
     }
 }

@@ -25,4 +25,3 @@ public class Joueur implements Comparable<Joueur>{
         return Integer.compare(this.score, joueur.score);
     }
 }
-

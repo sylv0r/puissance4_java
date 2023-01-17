@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import com.codingf.joueur.Joueur;
 public class Top10 {
-    public static void main(String[] args) {
+    public static void top10() {
         // Créer la liste du top 10
         List<Joueur> players = new ArrayList<>();
         players.add(new Joueur("Julien", 39));
