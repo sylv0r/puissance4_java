@@ -43,7 +43,7 @@ public class Grid {
         for (int j = 0; j < 7; j++) {
 
             sb.append(j + 1);
-            sb.append("   ");
+            sb.append("    ");
         }
         sb.append("\n");
         for (int i = 0; i < 6; i++) {
