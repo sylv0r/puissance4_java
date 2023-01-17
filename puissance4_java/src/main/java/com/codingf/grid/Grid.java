@@ -7,6 +7,37 @@ public class Grid {
 
 
     int age;
+    /*public static String generateGridString(char[][] grid) {
+        StringBuilder sb = new StringBuilder();
+        for (int j = 0; j < 7; j++) {
+
+            sb.append(j + 1);
+            sb.append("   ");
+        }
+        sb.append("\n");
+        for (int i = 0; i < 6; i++) {
+
+            for (int j = 0; j < 7; j++) {
+                sb.append("┼───");
+
+            }
+            sb.append("┤\n");
+            for (int j = 0; j < 7; j++) {
+                sb.append("│ ");
+                sb.append(grid[i][j]);
+                sb.append(" ");
+            }
+            sb.append("│\n");
+        }
+        for (int j = 0; j < 7; j++) {
+            sb.append("┼───");
+        }
+        sb.append("│\n");
+        //couleurs
+
+
+        return sb.toString();
+    }*/
     public static String generateGridString(char[][] grid) {
         StringBuilder sb = new StringBuilder();
         for (int j = 0; j < 7; j++) {
@@ -23,9 +54,16 @@ public class Grid {
             sb.append("┤\n");
             for (int j = 0; j < 7; j++) {
                 sb.append("│ ");
-                sb.append(grid[i][j]);
+                if (grid[i][j] == '@') {
+                    sb.append("\033[31m"+grid[i][j]+"\033[0m");  // Change la couleur en rouge si le jeton est '@'
+                } else if (grid[i][j] == '=') {
+                    sb.append("\033[34m"+grid[i][j]+"\033[0m");  // Change la couleur en bleu si le jeton est '='
+                }else{
+                    sb.append(grid[i][j]);
+                }
                 sb.append(" ");
             }
+
             sb.append("│\n");
         }
         for (int j = 0; j < 7; j++) {
@@ -34,6 +72,27 @@ public class Grid {
         sb.append("│\n");
         return sb.toString();
     }
+
+
+
+
+    /*public static void colorize(char[][] grid) {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
+                if (grid[i][j] == '@') {
+                    grid[i][j] = '\u001B'+"[31m"+"@"+'\u001B'+"[0m";  // Change la couleur en rouge si le jeton est '@'
+                } else if (grid[i][j] == '=') {
+                    grid[i][j] = '\u001B'+"[34m"+"="+'\u001B'+"[0m";  // Change la couleur en bleu si le jeton est '='
+                }
+                System.out.print(grid[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }*/
+
+
+
+
 
 
     public static void place(char[][] grid, int result, Game game, Player currentPlayer) {
@@ -47,6 +106,7 @@ public class Grid {
             }
         }
     }
+
 
 
     public static char[][] generateGridSpace() {
