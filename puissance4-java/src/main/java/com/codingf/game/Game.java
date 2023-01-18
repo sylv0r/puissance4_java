@@ -12,7 +12,6 @@ import com.codingf.winCondition.WinConditions;
 import java.util.Scanner;
 
 public class Game {
-    private int flo;
     private Grid grid;
     private Player player1;
     private Player player2;
