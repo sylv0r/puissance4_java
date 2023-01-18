@@ -61,6 +61,47 @@ public class Game {
             System.out.print("colone :  ");
             swapTurn();
 
+            if (Flo.winConditionVerticale(grille)){
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionHorizontale(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+
+
+            } else if (Flo.winConditionDABD(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionDXBD(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+
+
+            } else if (Flo.winConditionDABG(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionDXBG(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+
+
+            } else if (Flo.winConditionDAHD(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionDXHD(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+
+
+            } else if (Flo.winConditionDAHG(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionDXHG(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            }
+
+
 
             }
         }
