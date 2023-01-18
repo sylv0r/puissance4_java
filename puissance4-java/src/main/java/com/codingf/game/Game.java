@@ -46,7 +46,7 @@ public class Game {
         return ez;
     }
 
-    public void displayWinner(Player winner) {
+    public void displayWinner(Player winner)  {
         System.out.println("Le gagnant est " + winner.name+ " avec le couleur "+winner.color) ;
     }
 
