@@ -17,7 +17,7 @@ public class Grid {
         StringBuilder sb = new StringBuilder();
 
         int i;
-        for(i = 0; i < 7; ++i) {
+        for (i = 0; i < 7; ++i) {
             sb.append("  ");
             sb.append(i + 1);
             sb.append(" ");
@@ -25,15 +25,16 @@ public class Grid {
 
         sb.append("\n");
 
-        for(i = 0; i < 6; ++i) {
+        for (i = 0; i < 6; ++i) {
             int j;
-            for(j = 0; j < 7; ++j) {
+            for (j = 0; j < 7; ++j) {
                 sb.append("┼───");
             }
             sb.append("┤\n");
 
-            for(j = 0; j < 7; ++j) {
+            for (j = 0; j < 7; ++j) {
                 sb.append("│ ");
+
                 if (grid[i][j] == '@') {
                     sb.append("\u001b[31m" + grid[i][j] + "\u001b[0m");
                 } else if (grid[i][j] == '=') {
@@ -49,7 +50,7 @@ public class Grid {
             sb.append("│\n");
         }
 
-        for(i = 0; i < 7; ++i) {
+        for (i = 0; i < 7; ++i) {
             sb.append("┼───");
         }
 
@@ -58,7 +59,7 @@ public class Grid {
     }
 
     public static void place(char[][] grid, int result, Game game, Player currentPlayer) {
-        for(int i = 5; i >= 0; --i) {
+        for (int i = 5; i >= 0; --i) {
             if (grid[i][result - 1] != '@' && grid[i][result - 1] != '=') {
 
                 grid[i][result - 1] = game.actualPlayer(currentPlayer);
@@ -68,6 +69,66 @@ public class Grid {
         }
 
     }
+
+    public static String generateGridStringFinish(char[][] grid, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
+        StringBuilder sb = new StringBuilder();
+        int i;
+        for (i = 0; i < 6; ++i) {
+            int j;
+            for (j = 0; j < 7; ++j) {
+                sb.append("┼───");
+            }
+
+            sb.append("┤\n");
+
+            for (j = 0; j < 7; ++j) {
+                sb.append("│ ");
+                if (i == x1 && j == y1 || i == x2 && j == y2 || i == x3 && j == y3 || i == x4 && j == y4) {
+                    sb.append("\u001b[33m" + grid[i][j] + "\u001b[0m");
+                } else if (grid[i][j] == '@') {
+                    sb.append("\u001b[31m" + grid[i][j] + "\u001b[0m");
+                } else if (grid[i][j] == '=') {
+                    sb.append("\u001b[34m" + grid[i][j] + "\u001b[0m");
+                } else {
+                    sb.append(grid[i][j]);
+                }
+                sb.append(" ");
+            }
+
+            sb.append("│\n");
+        }
+
+        for (i = 0; i < 7; ++i) {
+            sb.append("┼───");
+        }
+
+        sb.append("│\n");
+        System.out.println(sb.toString());
+        return sb.toString();
+    }
+
+
+
+    /*public static String generateGridStringFinish(char[][] grid, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
+        StringBuilder sb = new StringBuilder();
+
+        int i;
+        int j;
+
+        for(i = 0; i < 6; ++i) {
+            for (j = 0; j < 7; ++j) {
+                if((i == x1 && j == y1) || (i == x2 && j == y2) || (i == x3 && j == y3) || (i == x4 && j == y4)){
+                    sb.append("\u001b[33m" + grid[i][j] + "\u001b[0m");
+                }else{
+                    sb.append(grid[i][j]);
+                }
+            }
+        }
+        System.out.println(sb.toString());
+        return sb.toString();
+    }*/
+
+
 
     public static char[][] generateGridSpace() {
         char[][] grid = new char[6][7];
