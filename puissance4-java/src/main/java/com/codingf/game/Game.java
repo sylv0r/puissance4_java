@@ -159,12 +159,53 @@ public class Game {
                 System.out.println("veillez choisir un nombre entre 1 et 7");
                 continue;
             }
-            //Grid.colorize(grille);
-
-
             grid.place(grille,result,game, this.currentPlayer);
             swapTurn();
             grid.place(grille, Ia1.ia1(grille),game, this.currentPlayer);
+
+//--------------------------------------------------WIN CONDITION--------------------------------------------------------------------------------------------
+            if (Flo.winConditionVerticale(grille)){
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionHorizontale(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+
+
+            } else if (Flo.winConditionDABD(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionDXBD(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+
+
+            } else if (Flo.winConditionDABG(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionDXBG(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+
+
+            } else if (Flo.winConditionDAHD(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionDXHD(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+
+
+            } else if (Flo.winConditionDAHG(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            } else if (Flo.winConditionDXHG(grille)) {
+                System.out.println(this.currentPlayer+"a gagner");
+                break;
+            }
+
+
+
 
 
         }
