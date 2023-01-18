@@ -129,7 +129,7 @@ public class Game {
 
     public void startIa1() {
         Game game = new Game();
-
+        currentPlayer = this.player1;
         char[][] grille = grid.generateGridSpace();
         System.out.println(grid.generateGridString(grille));
 
@@ -163,7 +163,7 @@ public class Game {
 
 
             grid.place(grille,result,game, this.currentPlayer);
-
+            swapTurn();
             grid.place(grille, Ia1.ia1(grille),game, this.currentPlayer);
 
 
