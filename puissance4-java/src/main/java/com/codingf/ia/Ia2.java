@@ -32,6 +32,7 @@ public class Ia2 {
 
 
     //static boolean Fuite = false;
+    // CONDITIONS DE VICTOIRE IA 2
     public static boolean winConditionVerticaleIa2(char[][] grid) {
         for (int j = 0; j < 7; j++) {
             for (int i = 0; i < 3; i++) {
@@ -60,3 +61,40 @@ public class Ia2 {
             }
         }
     }
+    public static boolean winConditionDABDIa2(char[][] grid) {
+
+    }
+
+    public static boolean winConditionDXBD(char[][] grid) {
+
+    }
+
+    public static boolean winConditionDABG(char[][] grid) {
+
+    }
+
+    public static boolean winConditionDXBG(char[][] grid) {
+
+    }
+
+    public static boolean winConditionDAHD(char[][] grid) {
+
+    }
+
+    public static boolean winConditionDAHG(char[][] grid) {
+
+    }
+
+    public static boolean winConditionDXHG(char[][] grid) {
+
+    }
+
+
+
+
+
+
+
+
+
+

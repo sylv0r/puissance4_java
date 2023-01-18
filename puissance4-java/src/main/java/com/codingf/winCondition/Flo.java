@@ -116,8 +116,7 @@ public class Flo {
         return false;
     }
 
-    public static boolean winConditionDXBG(char[][
-            ] grid){
+    public static boolean winConditionDXBG(char[][] grid){
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDXBG = 0;

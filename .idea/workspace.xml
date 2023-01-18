@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f99e94a-5bc0-4e71-8a16-36beffc1789f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/joueur/Joueur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/menu/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/top10/Top10.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/winCondition/Flo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/ia/Ia1.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/ia/Ia1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/ia/Ia2.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/ia/Ia2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/input/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/input/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/grid/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/grid/Grid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/ia/Ia1.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/ia/Ia1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/ia/Ia2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/input/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/input/Input.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +29,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2KSEZPWHj7slRUDbkXLCWTJ20Gb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
