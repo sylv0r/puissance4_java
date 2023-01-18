@@ -7,8 +7,8 @@ public class Ia2 {
 
     public static int ia2(char[][] grille) {
         Random tempo = new Random();
-        int colonne = tempo.nextInt(7)+1;
-        if(colonne == 8){
+        int colonne = tempo.nextInt(7) + 1;
+        if (colonne == 8) {
             colonne++;
         }
         while (estColonnePleine(colonne, grille)) {
@@ -21,14 +21,15 @@ public class Ia2 {
         return colonne;
     }
 
-    private static boolean estColonnePleine(int colonne, char[][] grid ) {
-        for(int i = 0; i < 6; i++) {
+    private static boolean estColonnePleine(int colonne, char[][] grid) {
+        for (int i = 0; i < 6; i++) {
             if (grid[i][colonne - 1] != '@' && grid[i][colonne - 1] != '=') {
                 return false;
             }
         }
         return true;
     }
+}
 
 
     //static boolean Fuite = false;
@@ -89,12 +90,4 @@ public class Ia2 {
 
     }
 
-
-
-
-
-
-
-
-
-
+*/
