@@ -42,6 +42,7 @@ public class Grid {
                     sb.append(grid[i][j]);
                 }
 
+
                 sb.append(" ");
             }
 

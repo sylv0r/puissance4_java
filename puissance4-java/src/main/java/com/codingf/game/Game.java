@@ -12,8 +12,9 @@ import com.codingf.grid.Grid;
 
 import java.util.Scanner;
 
+import static com.codingf.grid.Grid.generateGridString;
+
 public class Game {
-    private int flo;
     private Grid grid;
     private Player player1;
     private Player player2;
@@ -61,7 +62,7 @@ public class Game {
         Game game = new Game();
         currentPlayer = this.player1;
         char[][] grille = grid.generateGridSpace();
-        System.out.println(grid.generateGridString(grille));
+        System.out.println(generateGridString(grille));
 
 
         while (true) {
@@ -109,7 +110,7 @@ public class Game {
         Game game = new Game();
         currentPlayer = this.player1;
         char[][] grille = grid.generateGridSpace();
-        System.out.println(grid.generateGridString(grille));
+        System.out.println(generateGridString(grille));
 
 
         while (true) {
@@ -161,7 +162,6 @@ public class Game {
     // FONCTION DES WINS CONDITIONS
     public boolean callAll(char[][] grille) {
         if (WinConditions.winConditionVerticale(grille)) {
-
             return true;
         } else if (WinConditions.winConditionHorizontale(grille)) {
 

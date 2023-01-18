@@ -6,13 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d21b7f68-30fd-466f-9626-75d2fc918a81" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/grid/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/grid/Grid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/winCondition/WinConditions.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/winCondition/WinConditions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/game/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/grid/Grid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/grid/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/ia/Ia1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/input/Input.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/joueur/Joueur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/menu/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/player/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/top10/Top10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/winCondition/WinConditions.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/winCondition/WinConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/winCondition/WinConditions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,36 +33,41 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sylvian" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KSEZPWHj7slRUDbkXLCWTJ20Gb" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/florianrichet/Desktop/01-Ecole/05-Java/puissance4/puissance4_java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/florianrichet/Desktop/01-Ecole/05-Java/puissance4/puissance4_java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf" />
@@ -102,7 +113,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/sylvian" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -112,13 +135,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java</url>
-          <line>83</line>
+          <line>93</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
