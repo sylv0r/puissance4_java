@@ -1,7 +1,7 @@
 package com.codingf.winCondition;
 
 
-public class Flo {
+public class WinConditions {
 
     static int win1a = 0;
     static int win1x = 0;
