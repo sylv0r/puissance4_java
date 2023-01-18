@@ -7,13 +7,13 @@ public class Ia1 {
 
     public static int ia1(char[][] grille) {
         Random tempo = new Random();
-        int colonne = tempo.nextInt(6)+1;
-        if(colonne == 6){
+        int colonne = tempo.nextInt(7)+1;
+        if(colonne == 8){
             colonne++;
         }
         while (estColonnePleine(colonne, grille)) {
-            colonne = tempo.nextInt(6) + 1;
-            if (colonne == 6) {
+            colonne = tempo.nextInt(7) + 1;
+            if (colonne == 8) {
                 colonne++;
             }
         }
