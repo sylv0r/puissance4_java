@@ -6,7 +6,7 @@ import com.codingf.grid.Grid;
 import com.codingf.ia.Ia1;
 import com.codingf.input.Input;
 import com.codingf.player.Player;
-import com.codingf.winCondition.Flo;
+import com.codingf.winCondition.WinConditions;
 
 
 import java.util.Scanner;
@@ -18,6 +18,7 @@ public class Game {
     private Player currentPlayer;
     int result;
     String name;
+
     public Game() {
         this.grid = new Grid();
         this.player1 = new Player(0, '@');
@@ -28,7 +29,7 @@ public class Game {
         if (this.currentPlayer.equals(this.player1)) {
             this.currentPlayer = this.player2;
 
-        } else if ( this.currentPlayer.equals(this.player2)) {
+        } else if (this.currentPlayer.equals(this.player2)) {
             this.currentPlayer = this.player1;
         } else {
             this.currentPlayer = this.player1;
@@ -62,7 +63,7 @@ public class Game {
 
             try {
                 result = Integer.parseInt(name);
-                if (!Input.verrifInput(result)){
+                if (!Input.verrifInput(result)) {
                     System.out.println("veillez choisir un nombre entre 1 et 7");
                     continue;
                 }
@@ -71,52 +72,15 @@ public class Game {
                 continue;
             }
 
-            if (!Input.verrifInput(result)){
+            if (!Input.verrifInput(result)) {
                 System.out.println("veillez choisir un nombre entre 1 et 7");
                 continue;
             }
             //Grid.colorize(grille);
 
 
-            grid.place(grille,result,game, this.currentPlayer);
-
-            if (Flo.winConditionVerticale(grille)){
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionHorizontale(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-
-
-            } else if (Flo.winConditionDABD(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionDXBD(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-
-
-            } else if (Flo.winConditionDABG(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionDXBG(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-
-
-            } else if (Flo.winConditionDAHD(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionDXHD(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-
-
-            } else if (Flo.winConditionDAHG(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionDXHG(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
+            grid.place(grille, result, game, this.currentPlayer);
+            if (callAll(grille)){
                 break;
             }
 
@@ -143,10 +107,9 @@ public class Game {
             name = console.nextLine();
 
 
-
             try {
                 result = Integer.parseInt(name);
-                if (!Input.verrifInput(result)){
+                if (!Input.verrifInput(result)) {
                     System.out.println("veillez choisir un nombre entre 1 et 7");
                     continue;
                 }
@@ -155,60 +118,73 @@ public class Game {
                 continue;
             }
 
-            if (!Input.verrifInput(result)){
+            if (!Input.verrifInput(result)) {
                 System.out.println("veillez choisir un nombre entre 1 et 7");
                 continue;
             }
             //Grid.colorize(grille);
 
 
-            grid.place(grille,result,game, this.currentPlayer);
-            swapTurn();
-            grid.place(grille, Ia1.ia1(grille),game, this.currentPlayer);
-
-            if (Flo.winConditionVerticale(grille)){
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionHorizontale(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-
-
-            } else if (Flo.winConditionDABD(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionDXBD(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-
-
-            } else if (Flo.winConditionDABG(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionDXBG(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-
-
-            } else if (Flo.winConditionDAHD(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionDXHD(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-
-
-            } else if (Flo.winConditionDAHG(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
-                break;
-            } else if (Flo.winConditionDXHG(grille)) {
-                System.out.println(this.currentPlayer+"a gagner");
+            grid.place(grille, result, game, this.currentPlayer);
+            if (callAll(grille)){
                 break;
             }
-
+            swapTurn();
+            grid.place(grille, Ia1.ia1(grille), game, this.currentPlayer);
+             if (callAll(grille)){
+                 break;
+             }
 
 
         }
     }
 
+
+    // FONCTION DES WINS CONDITIONS
+    public boolean callAll(char[][] grille) {
+        if (WinConditions.winConditionVerticale(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+        } else if (WinConditions.winConditionHorizontale(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+
+
+        } else if (WinConditions.winConditionDABD(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+        } else if (WinConditions.winConditionDXBD(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+
+
+        } else if (WinConditions.winConditionDABG(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+        } else if (WinConditions.winConditionDXBG(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+
+
+        } else if (WinConditions.winConditionDAHD(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+        } else if (WinConditions.winConditionDXHD(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+
+
+        } else if (WinConditions.winConditionDAHG(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+        } else if (WinConditions.winConditionDXHG(grille)) {
+            System.out.println(this.currentPlayer + "a gagner");
+            return true;
+        }
+
+        return false;
+    }
+    // FONCTION DES WINS CONDITIONS
+
 }
+
