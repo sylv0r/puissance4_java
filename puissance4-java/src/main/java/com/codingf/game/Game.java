@@ -163,7 +163,10 @@ public class Game {
             swapTurn();
             grid.place(grille, Ia1.ia1(grille),game, this.currentPlayer);
 
+<<<<<<< HEAD
 //--------------------------------------------------WIN CONDITION--------------------------------------------------------------------------------------------
+=======
+>>>>>>> origin/Flo2
             if (Flo.winConditionVerticale(grille)){
                 System.out.println(this.currentPlayer+"a gagner");
                 break;
@@ -205,8 +208,11 @@ public class Game {
             }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/Flo2
 
         }
     }
