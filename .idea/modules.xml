@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/puissance4_java/puissance4_java.iml" filepath="$PROJECT_DIR$/puissance4_java/puissance4_java.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/puissance4_java.iml" filepath="$PROJECT_DIR$/.idea/puissance4_java.iml" />
     </modules>
   </component>

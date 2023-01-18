@@ -1,14 +1,20 @@
 package com.codingf.input;
 
+import java.util.Scanner;
+
 public class Input {
     // static methodes
 
-    public static boolean verrifInput(int result){
-        if (result<1 || result>7){
-            return false;
-        }else {
-            return true;
+    public static int readInt(Scanner scan){
+
+        String input = scan.nextLine();
+        int result = -1;
+
+        try {
+            result =Integer.parseInt(input);
+        }catch (NumberFormatException e){
 
         }
+        return result;
     }
 }

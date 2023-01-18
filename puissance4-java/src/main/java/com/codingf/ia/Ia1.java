@@ -2,32 +2,21 @@ package com.codingf.ia;
 
 import java.util.Random;
 
-
 public class Ia1 {
 
-    public static int ia1(char[][] grille) {
+    public static void ia1() {
+
+        // random number <=1 / >+ 7
         Random tempo = new Random();
-        int colonne = tempo.nextInt(7)+1;
-        if(colonne == 8){
+
+        int colonne = tempo.nextInt(6)+1;
+        if(colonne == 6){
             colonne++;
         }
-        while (estColonnePleine(colonne, grille)) {
-            colonne = tempo.nextInt(7) + 1;
-            if (colonne == 8) {
-                colonne++;
-            }
-        }
+
         System.out.println(colonne);
-        return colonne;
-    }
 
-    private static boolean estColonnePleine(int colonne, char[][] grid ) {
-        for(int i = 0; i < 6; i++) {
-            if (grid[i][colonne - 1] != '@' && grid[i][colonne - 1] != '=') {
-                return false;
-            }
+
+
         }
-        return true;
     }
-
-}

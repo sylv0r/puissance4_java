@@ -6,11 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="puissance4_java" />
+        <module name="puissance4-java" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="puissance4_java" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>
