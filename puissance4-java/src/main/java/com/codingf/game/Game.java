@@ -4,6 +4,7 @@ package com.codingf.game;
 
 import com.codingf.grid.Grid;
 import com.codingf.ia.Ia1;
+import com.codingf.ia.Ia2;
 import com.codingf.input.Input;
 import com.codingf.player.Player;
 import com.codingf.winCondition.WinConditions;
@@ -18,10 +19,9 @@ public class Game {
     private Player currentPlayer;
     int result;
     String name;
-
     public Game() {
         this.grid = new Grid();
-        this.player1 = new Player(0, '@' );
+        this.player1 = new Player(0, '@');
         this.player2 = new Player(1, '=');
     }
 

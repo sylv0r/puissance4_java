@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f35a2068-75d9-4415-9dd6-e9c37164c994" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/puissance4_java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingf/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingf/grid/Grid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingf/grid/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingf/joueur/Joueur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingf/top10/Top10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codingf/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codingf/grid/Grid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codingf/joueur/Joueur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codingf/top10/Top10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/src/main/java/com/codingf/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/src/main/java/com/codingf/game/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/src/main/java/com/codingf/grid/Grid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/src/main/java/com/codingf/grid/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/src/main/java/com/codingf/input/Input.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/src/main/java/com/codingf/player/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/target/classes/com/codingf/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/target/classes/com/codingf/game/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/target/classes/com/codingf/grid/Grid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/target/classes/com/codingf/grid/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/target/classes/com/codingf/input/Input.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../puissance4_java/target/classes/com/codingf/player/Player.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2KSGJlZUiQ0BLpfhfsOaoXQ48hg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f35a2068-75d9-4415-9dd6-e9c37164c994" name="Changes" comment="" />
+      <created>1673960504992</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673960504992</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
