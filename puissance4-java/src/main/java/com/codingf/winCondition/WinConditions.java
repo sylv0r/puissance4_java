@@ -50,27 +50,27 @@ public class WinConditions {
 
 
 
-        public static boolean winConditionDABD(char[][] grid){
-            for (int i = 0; i < 6; i++) { // Première boucle qui parcours toutes les cases de la ligne 0, 1 par 1, après la fin de la Seconde boucle
-                for (int j = 0; j < 7; j++) { // Seconde boucle qui parcours toutes les cases varticales
-                    int winDataDABD = 0; // Stocke le score
-                    if (i + 3 < 6 && j + 3 < 7 && Fuite == false) { // empeche les OutOfRange en detectant si une possible diagonale depasse les limites de la bordure
-                        for (int k = 0; k <= 3; k++) { // Troisieme boucle qui parcours les 3 prochaines cases, vers le bas droit, à partir de celle détectée initialement
-                            if (grid[i + k][j + k] == '@') { // SI la cases en bas à droite ,depuis celle initiale + k, à le meme jetons
-                                winDataDABD++; // Augmente de 1 le score winDataDABD
-                            }
+    public static boolean winConditionDABD(char[][] grid){
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
+                int winDataDABD = 0;
+                if (i + 3 < 6 && j + 3 < 7 && Fuite == false) {
+                    for (int k = 0; k <= 3; k++) {
+                        if (grid[i + k][j + k] == '@') {
+                            winDataDABD++;
                         }
-                        if (winDataDABD == 4) { // SI score winDataDABD est égale à 4
-                            Grid.generateGridStringFinish(grid,i,j,i+1,j+1,i+2,j+2,i+3,j+3);
-                            System.out.println("Victoire sur la ligne diagonale @" + (j + 1));
-                            Fuite = true; // Empeche les autres vérifications d'etre effectuées
-                            return true; // Met fin au jeu
-                        }
+                    }
+                    if (winDataDABD == 4) {
+                        Grid.generateGridStringFinish(grid,i,j,i+1,j+1,i+2,j+2,i+3,j+3);
+                        System.out.println("Victoire sur la ligne diagonale bas droite @ " + (j + 1));
+                        Fuite = true;
+                        return true;
                     }
                 }
             }
-            return false;
         }
+        return false;
+    }
 
 
         public static boolean winConditionDXBD(char[][] grid){
@@ -124,6 +124,7 @@ public class WinConditions {
                         for (int k = 0; k <= 3; k++) {
                             if (grid[i - k][j - k] == '=') {
                                 winDataDXBG++;
+
                             }
                         }
                         if (winDataDXBG == 4) {
