@@ -3,7 +3,7 @@ package com.codingf.winCondition;
 
 public class WinConditions {
 
-    static boolean Fuite = false;
+    public static boolean Fuite = false;
 
     // DEBUT WINS CONDITIONS VERTICALES
     public static boolean winConditionVerticale(char[][] grid) {
@@ -28,6 +28,7 @@ public class WinConditions {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 4; j++) {
                 if (grid[i][j] == '@' && grid[i][j + 1] == '@' && grid[i][j + 2] == '@' && grid[i][j + 3] == '@') {
+                    grid[i][j] ='A';
                     System.out.println("Victoire sur la ligne A " + (i + 1));
                     return true;
                 }

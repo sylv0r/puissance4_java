@@ -4,6 +4,9 @@ package com.codingf.grid;
 import com.codingf.game.Game;
 import com.codingf.player.Player;
 
+import static com.codingf.winCondition.WinConditions.Fuite;
+
+
 public class Grid {
     int age;
 
@@ -27,7 +30,6 @@ public class Grid {
             for(j = 0; j < 7; ++j) {
                 sb.append("┼───");
             }
-
             sb.append("┤\n");
 
             for(j = 0; j < 7; ++j) {

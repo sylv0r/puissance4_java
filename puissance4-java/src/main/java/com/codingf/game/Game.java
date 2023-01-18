@@ -7,6 +7,7 @@ import com.codingf.ia.Ia1;
 import com.codingf.input.Input;
 import com.codingf.player.Player;
 import com.codingf.winCondition.WinConditions;
+import com.codingf.grid.Grid;
 
 
 import java.util.Scanner;
@@ -74,6 +75,7 @@ public class Game {
 
             if (!Input.verrifInput(result)) {
                 System.out.println("veillez choisir un nombre entre 1 et 7");
+
                 continue;
             }
             //Grid.colorize(grille);
