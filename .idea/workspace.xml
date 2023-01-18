@@ -9,16 +9,10 @@
       <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/game/Game.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/grid/Grid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/grid/Token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/ia/Ia1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/input/Input.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/joueur/Joueur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/menu/Menu.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/player/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/top10/Top10.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/winCondition/WinConditions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/winCondition/WinConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/winCondition/WinConditions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,16 +124,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

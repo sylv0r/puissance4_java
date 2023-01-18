@@ -12,10 +12,12 @@ public class WinConditions {
         for (int j = 0; j < 7; j++) { // Première boucle qui change de colonne verticale
             for (int i = 0; i < 3; i++) { // Seconde boucle qui parcours toutes les lignes de la colonne j
                 if (grid[i][j] == '@' && grid[i + 1][j] == '@' && grid[i + 2][j] == '@' && grid[i + 3][j] == '@') { // SI la case parcourue contient '@' puis celle en dessous de 1, puis celle en dessous de 2, puis celle en dessous de 3
+                    Grid.generateGridStringFinish(grid,i,j,i+1,j,i+2,j,i+3,j);
                     System.out.println("Victoire sur la colonne @ " + (j + 1)); // Victoire
                     return true;
                 }
                 if (grid[i][j] == '=' && grid[i + 1][j] == '=' && grid[i + 2][j] == '=' && grid[i + 3][j] == '=') {
+                    Grid.generateGridStringFinish(grid,i,j,i+1,j,i+2,j,i+3,j);
                     System.out.println("Victoire sur la colonne = " + (j + 1));
                     return true;
                 }
@@ -30,13 +32,13 @@ public class WinConditions {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 4; j++) {
                 if (grid[i][j] == '@' && grid[i][j + 1] == '@' && grid[i][j + 2] == '@' && grid[i][j + 3] == '@') {
-                    grid[i][j] ='A';
                     System.out.println("Victoire sur la ligne A " + (i + 1));
                     Grid.generateGridStringFinish(grid,i,j,i,j+1,i,j+2,i,j+3);
                     //Grid.generateGridStringFinish(grid,grid[i][j], grid[i][j + 1] , grid[i][j + 2], grid[i][j + 3]);
                     return true;
                 }
                 if (grid[i][j] == '=' && grid[i][j + 1] == '=' && grid[i][j + 2] == '=' && grid[i][j + 3] == '=') {
+                    Grid.generateGridStringFinish(grid,i,j,i,j+1,i,j+2,i,j+3);
                     System.out.println("Victoire sur la ligne A " + (i + 1));
                     return true;
                 }
@@ -59,6 +61,7 @@ public class WinConditions {
                             }
                         }
                         if (winDataDABD == 4) { // SI score winDataDABD est égale à 4
+                            Grid.generateGridStringFinish(grid,i,j,i+1,j+1,i+2,j+2,i+3,j+3);
                             System.out.println("Victoire sur la ligne diagonale @" + (j + 1));
                             Fuite = true; // Empeche les autres vérifications d'etre effectuées
                             return true; // Met fin au jeu
@@ -81,7 +84,8 @@ public class WinConditions {
                             }
                         }
                         if (winDataDXBD == 4) {
-                            System.out.println("Victoire sur la ligne diagonale = " + (j + 1));
+                            Grid.generateGridStringFinish(grid,i,j,i+1,j+1,i+2,j+2,i+3,j+3);
+                            System.out.println("Victoire sur la ligne diagonale bas droite = " + (j + 1));
                             Fuite = true;
                             return true;
                         }
@@ -101,6 +105,7 @@ public class WinConditions {
                             }
                         }
                         if (winDataDABG == 4) {
+                            Grid.generateGridStringFinish(grid,i,j,i-1,j-1,i-2,j-2,i-3,j-3);
                             System.out.println("Victoire sur la ligne diagonale bas gauche @ " + (j + 1));
                             Fuite = true;
                             return true;
@@ -122,6 +127,7 @@ public class WinConditions {
                             }
                         }
                         if (winDataDXBG == 4) {
+                            Grid.generateGridStringFinish(grid,i,j,i-1,j-1,i-2,j-2,i-3,j-3);
                             System.out.println("Victoire sur la ligne diagonale bas gauche = " + (j + 1));
                             Fuite = true;
                             return true;
@@ -143,6 +149,7 @@ public class WinConditions {
                             }
                         }
                         if (winDataDAHD == 4) {
+                            Grid.generateGridStringFinish(grid,i,j,i-1,j+1,i-2,j+2,i-3,j+3);
                             System.out.println("Victoire sur la ligne diagonale haute droite @ " + (j + 1));
                             Fuite = true;
                             return true;
@@ -165,6 +172,7 @@ public class WinConditions {
                             }
                         }
                         if (winDataDXHD == 4) {
+                            Grid.generateGridStringFinish(grid,i,j,i-1,j+1,i-2,j+2,i-3,j+3);
                             System.out.println("Victoire sur la ligne diagonale haute droite = " + (j + 1));
                             Fuite = true;
                             return true;
@@ -185,6 +193,7 @@ public class WinConditions {
                             }
                         }
                         if (winDataDAHG == 4) {
+                            Grid.generateGridStringFinish(grid,i,j,i+1,j-1,i+2,j-2,i+3,j-3);
                             System.out.println("Victoire sur la ligne diagonale haute gauche @ " + (j + 1));
                             Fuite = true;
                             return true;

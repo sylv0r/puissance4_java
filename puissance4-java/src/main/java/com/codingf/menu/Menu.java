@@ -1,5 +1,6 @@
 package com.codingf.menu;
 import com.codingf.game.Game;
+import com.codingf.player.Player;
 import com.codingf.top10.Top10;
 
 import java.util.Scanner;
@@ -14,7 +15,8 @@ public class Menu {
             System.out.println("1. Jouer contre l'IA");
             System.out.println("2. Jouer à 2");
             System.out.println("3. Le top 10");
-            System.out.println("4. QUITTER");
+            System.out.println("4. Rejouer");
+            System.out.println("5. QUITTER");
             System.out.print("Votre choix : ");
             choice = scanner.nextInt();
             switch (choice) {
@@ -34,6 +36,10 @@ public class Menu {
                     break;
                 case 4:
                     System.out.println("Vous avez choisi l'option 4.");
+                    game.start();
+                    break;
+                case 5:
+                    System.out.println("Vous avez choisi l'option 5.");
                     System.exit(0);
                     break;
                 default:
