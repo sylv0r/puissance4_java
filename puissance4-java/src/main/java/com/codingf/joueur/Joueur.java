@@ -1,7 +1,5 @@
 package com.codingf.joueur;
 
-import com.codingf.top10.Top10;
-
 // Joueur class
 public class Joueur implements Comparable<Joueur>{
     private String name;

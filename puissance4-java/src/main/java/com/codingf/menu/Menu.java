@@ -1,7 +1,7 @@
 package com.codingf.menu;
+
 import com.codingf.game.Game;
 import com.codingf.top10.Top10;
-
 import java.util.Scanner;
 
 public class Menu {
@@ -36,7 +36,7 @@ public class Menu {
                     break;
                 case 4:
                     System.out.println("Vous avez choisi l'option 4.");
-                    Top10.top10();
+                    Top10.writeTop10();
                     break;
                 case 5:
                     System.out.println("Vous avez choisi l'option 5.");

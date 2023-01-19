@@ -6,11 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="3f99e94a-5bc0-4e71-8a16-36beffc1789f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/ia/Ia2.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/ia/Ia2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/joueur/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/joueur/Joueur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/top10/Top10.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/top10/Top10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/game/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/grid/Grid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/grid/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/ia/Ia2.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/ia/Ia2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/joueur/Joueur.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/menu/Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/winCondition/Flo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/player/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puissance4-java/target/classes/com/codingf/top10/Top10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/top10.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +79,7 @@
       <recent name="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codingf.Main" />
       <module name="puissance4-java" />

@@ -7,6 +7,7 @@ import com.codingf.ia.Ia1;
 import com.codingf.ia.Ia2;
 import com.codingf.input.Input;
 import com.codingf.player.Player;
+import com.codingf.top10.Top10;
 import com.codingf.winCondition.Flo;
 
 
@@ -52,7 +53,6 @@ public class Game {
         currentPlayer = this.player1;
         char[][] grille = grid.generateGridSpace();
         System.out.println(grid.generateGridString(grille));
-
 
         while (true) {
             System.out.print("colone :  ");
@@ -124,7 +124,6 @@ public class Game {
 
             swapTurn();
 
-
         }
     }
 
@@ -134,9 +133,10 @@ public class Game {
         char[][] grille = grid.generateGridSpace();
         System.out.println(grid.generateGridString(grille));
 
-
+        int nb_coups = 0;
         while (true) {
             swapTurn();
+            nb_coups++;
             System.out.print("colone :  ");
 
             Scanner console = new Scanner(System.in);
@@ -206,7 +206,9 @@ public class Game {
                 System.out.println(this.currentPlayer+"a gagner");
                 break;
             }
+            System.out.println("Nombre de coup joué :"+ nb_coups);
         }
+        System.out.println("Nombre de coup joué :"+ nb_coups);
     }
 
     public void startIa2() {

@@ -29,11 +29,12 @@ public class Ia2 {
         }
         return true;
     }
-}
 
 
-    //static boolean Fuite = false;
+
+    static boolean Fuite = false;
     // CONDITIONS DE VICTOIRE IA 2
+/*
     public static boolean winConditionVerticaleIa2(char[][] grid) {
         for (int j = 0; j < 7; j++) {
             for (int i = 0; i < 3; i++) {
@@ -47,8 +48,9 @@ public class Ia2 {
                 }
             }
         }
-    }
 
+
+    /*
     public static boolean winConditionHorizontaleIa2(char[][] grid) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 4; j++) {
@@ -64,30 +66,31 @@ public class Ia2 {
     }
     public static boolean winConditionDABDIa2(char[][] grid) {
 
-    }
-
-    public static boolean winConditionDXBD(char[][] grid) {
 
     }
 
-    public static boolean winConditionDABG(char[][] grid) {
+    public static boolean winConditionDXBDIa2(char[][] grid) {
 
     }
 
-    public static boolean winConditionDXBG(char[][] grid) {
+    public static boolean winConditionDABGIa2(char[][] grid) {
 
     }
 
-    public static boolean winConditionDAHD(char[][] grid) {
+    public static boolean winConditionDXBGIa2(char[][] grid) {
 
     }
 
-    public static boolean winConditionDAHG(char[][] grid) {
+    public static boolean winConditionDAHDIa2(char[][] grid) {
 
     }
 
-    public static boolean winConditionDXHG(char[][] grid) {
+    public static boolean winConditionDAHGIa2(char[][] grid) {
 
     }
 
-*/
+    public static boolean winConditionDXHGIa2(char[][] grid) {
+
+    }
+
+*/}
