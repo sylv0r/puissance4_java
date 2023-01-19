@@ -8,9 +8,12 @@ import com.codingf.ia.Ia2;
 import com.codingf.input.Input;
 import com.codingf.player.Player;
 import com.codingf.winCondition.WinConditions;
+import com.codingf.grid.Grid;
 
 
 import java.util.Scanner;
+
+import static com.codingf.grid.Grid.generateGridString;
 
 public class Game {
     private Grid grid;
@@ -19,13 +22,20 @@ public class Game {
     private Player currentPlayer;
     int result;
     String name;
+<<<<<<< HEAD
+=======
+    boolean remake = false;
+
+>>>>>>> origin/Flo2
     public Game() {
         this.grid = new Grid();
         this.player1 = new Player(0, '@');
         this.player2 = new Player(1, '=');
     }
 
+
     private void swapTurn() {
+
         if (this.currentPlayer.equals(this.player1)) {
             this.currentPlayer = this.player2;
 
@@ -66,7 +76,7 @@ public class Game {
         Game game = new Game();
         currentPlayer = this.player1;
         char[][] grille = grid.generateGridSpace();
-        System.out.println(grid.generateGridString(grille));
+        System.out.println(generateGridString(grille, currentPlayer));
 
 
         while (true) {
@@ -89,6 +99,52 @@ public class Game {
 
             if (!Input.verrifInput(result)) {
                 System.out.println("veillez choisir un nombre entre 1 et 7");
+
+                continue;
+            }
+            //Grid.colorize(grille);
+
+
+            grid.place(grille, result, game, this.currentPlayer);
+            if (callAll(grille)){
+                displayWinner(this.currentPlayer);
+                break;
+            }
+
+
+            swapTurn();
+
+
+        }
+    }
+    public void restart() {
+        Game game = new Game();
+        currentPlayer = this.player1;
+        char[][] grille = grid.generateGridSpace();
+        System.out.println(generateGridString(grille, currentPlayer));
+
+
+        while (true) {
+            System.out.print(this.currentPlayer.name + " choisi une colone :  ");
+
+            Scanner console = new Scanner(System.in);
+
+            name = console.nextLine();
+
+            try {
+                result = Integer.parseInt(name);
+                if (!Input.verrifInput(result)) {
+                    System.out.println("veillez choisir un nombre entre 1 et 7");
+                    continue;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Erreur, il faut entrer un nombre entier");
+                continue;
+            }
+
+            if (!Input.verrifInput(result)) {
+                System.out.println("veillez choisir un nombre entre 1 et 7");
+
                 continue;
             }
             //Grid.colorize(grille);
@@ -110,10 +166,12 @@ public class Game {
     }
 
     public void startIa1() {
+        Player.setPlayerColorAi(player1);
+        Player.setPlayerColorAi(player2);
         Game game = new Game();
         currentPlayer = this.player2;
         char[][] grille = grid.generateGridSpace();
-        System.out.println(grid.generateGridString(grille));
+        System.out.println(generateGridString(grille, currentPlayer));
 
 
         while (true) {
@@ -203,7 +261,6 @@ public class Game {
     // FONCTION DES WINS CONDITIONS
     public boolean callAll(char[][] grille) {
         if (WinConditions.winConditionVerticale(grille)) {
-
             return true;
         } else if (WinConditions.winConditionHorizontale(grille)) {
 

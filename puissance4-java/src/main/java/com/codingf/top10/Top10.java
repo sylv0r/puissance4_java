@@ -1,46 +1,49 @@
 package com.codingf.top10;
-import java.io.BufferedWriter;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import com.codingf.joueur.Joueur;
-public class Top10 {
-    public static void top10() {
-        // Créer la liste du top 10
-        List<Joueur> players = new ArrayList<>();
-        players.add(new Joueur("Julien", 39));
-        players.add(new Joueur("Zineb", 10));
-        players.add(new Joueur("Alexandre", 123));
-        players.add(new Joueur("Florian", 95));
-        players.add(new Joueur("Jordan", 12));
-        players.add(new Joueur("Lucas", 130));
-        players.add(new Joueur("Théo", 145));
-        players.add(new Joueur("Matheo", 34));
-        players.add(new Joueur("Raphael", 100));
-        players.add(new Joueur("ytr", 144));
-        players.add(new Joueur("kjh", 131));
-        // Afficher les joueurs par leur score
-        Collections.sort(players);
 
-        // Ecrit le top 10 dans un fichier .txt
-        try (FileOutputStream fw = new FileOutputStream("top10.txt", false)) {
-            try (OutputStreamWriter osw = new OutputStreamWriter(fw, "UTF-8")) {
-                try (BufferedWriter bw = new BufferedWriter(osw)) {
-                    for (int i = 0; i < 10; i++) {
-                        bw.write(players.get(i).getName() + ": " + players.get(i).getScore());
-                        bw.newLine();
-                    }
-                }
+import java.io.*;
+import java.util.*;
+
+
+public class Top10 {
+
+
+    public static void readTop10() {
+        try {
+            BufferedReader top10 = new BufferedReader(new FileReader("top10.txt"));
+            Scanner fileScan = new Scanner(top10);
+
+            while (fileScan.hasNextLine()) {
+                String topInfo = fileScan.nextLine();
+                String[] infos = topInfo.split(" : ");
+                System.out.println(infos[0] + " a gagné en " + infos[1] + " coups");
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        }
+        catch (IOException e) {
+            System.out.println("NON");
+        }
+
+    }
+
+    // écriture dans le fichier
+
+    public static void writeTop10() {
+
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("top10.txt"));
+            File top10 = new File("../top10.txt");
+            BufferedWriter sortie;
+            if (top10.exists()) {
+                sortie = new BufferedWriter(new FileWriter("top10.txt"));
+            } else {
+                sortie = new BufferedWriter(new FileWriter("top10.txt", true));
+            }
+            sortie.write("bastien" + " : " + "5" + "\n");
+            sortie.close();
+        } catch (
+                IOException e) {
+            System.out.println("ca marche pas");
         }
     }
 
-    public static void affiche() {
-
-    }
 }

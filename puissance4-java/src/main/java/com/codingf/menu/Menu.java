@@ -1,5 +1,7 @@
 package com.codingf.menu;
 import com.codingf.game.Game;
+import com.codingf.grid.Grid;
+import com.codingf.player.Player;
 import com.codingf.top10.Top10;
 
 import java.util.Scanner;
@@ -11,10 +13,58 @@ public class Menu {
         int choice;
         do {
             System.out.println("Menu:");
+<<<<<<< HEAD
             System.out.println("1. Jouer contre l'IA de niveau 1");
             System.out.println("2. Jouer contre l'IA de niveau 2");
             System.out.println("3. Jouer à 2");
             System.out.println("4. Le top 10");
+=======
+            System.out.println("1. Jouer contre l'IA");
+            System.out.println("2. Jouer à 2");
+            System.out.println("3. Le top 10");
+            System.out.println("4. Rejouer");
+            System.out.println("5. QUITTER");
+            System.out.print("Votre choix : ");
+            choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println("Vous avez choisi l'option 1.");
+
+                    menuia();
+                    break;
+                case 2:
+                    System.out.println("Vous avez choisi l'option 2.");
+                    Grid.resetTkt();
+                    game.start();
+                    break;
+                case 3:
+                    System.out.println("Vous avez choisi l'option 3.");
+                    Top10.readTop10();
+                    break;
+                case 4:
+                    System.out.println("Vous avez choisi l'option 4.");
+                    game.restart();
+                    break;
+                case 5:
+                    System.out.println("Vous avez choisi l'option 5.");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Veuillez choisir un bon choix.");
+            }
+        } while (choice != 0);
+    }
+    public static void menuia() {
+        Game game = new Game();
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+        do {
+            System.out.println("Menu IA:");
+            System.out.println("1. Jouer contre l'IA Niveau 1");
+            System.out.println("2. Jouer contre l'IA Niveau 2");
+            System.out.println("3. Jouer contre l'IA Niveau 3");
+            System.out.println("4. Jouer contre l'IA Niveau 4");
+>>>>>>> origin/Flo2
             System.out.println("5. QUITTER");
             System.out.print("Votre choix : ");
             choice = scanner.nextInt();
@@ -27,6 +77,7 @@ public class Menu {
                 case 2:
                     System.out.println("Vous avez choisi l'option 2.");
 
+<<<<<<< HEAD
                     game.startIa2();
                     break;
                 case 3:
@@ -37,6 +88,17 @@ public class Menu {
                 case 4:
                     System.out.println("Vous avez choisi l'option 4.");
                     Top10.top10();
+=======
+                    //game.startIa2();
+                    break;
+                case 3:
+                    System.out.println("Vous avez choisi l'option 3.");
+                    //game.startIa3();
+                    break;
+                case 4:
+                    System.out.println("Vous avez choisi l'option 4.");
+                    //game.startIa4();
+>>>>>>> origin/Flo2
                     break;
                 case 5:
                     System.out.println("Vous avez choisi l'option 5.");
