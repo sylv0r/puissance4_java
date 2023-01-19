@@ -3,6 +3,7 @@ package com.codingf.top10;
 import java.io.*;
 import java.util.*;
 
+
 public class Top10 {
 
 
@@ -38,7 +39,6 @@ public class Top10 {
                 sortie = new BufferedWriter(new FileWriter("top10.txt", true));
             }
             sortie.write("bastien" + " : " + "5" + "\n");
-            //sortie.write(currentPlayer.name() + " : " + currentPlayer.getTurn() + "\n");
             sortie.close();
         } catch (
                 IOException e) {

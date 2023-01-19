@@ -33,7 +33,7 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("Vous avez choisi l'option 3.");
-                    Top10.writeTop10();
+                    Top10.readTop10();
                     break;
                 case 4:
                     System.out.println("Vous avez choisi l'option 4.");

@@ -35,6 +35,7 @@ public class Player {
             System.out.print("Entrer le nom du joueur: ");
             player.name = console.nextLine();
 
+
     }
 
     public static void setPlayerColor(Player player) {
