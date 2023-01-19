@@ -16,8 +16,8 @@ public class Grid {
     public Grid() {
     }
     public static void resetTkt(){
-         tkt1 = false;
-         tkt2 = false;
+        tkt1 = false;
+        tkt2 = false;
     }
 
     public static String generateGridString(char[][] grid, Player currentPlayer) {
@@ -41,18 +41,13 @@ public class Grid {
             for (j = 0; j < 7; ++j) {
                 sb.append("│ ");
 
-                System.out.println(grid[i][j]);
                 if (tkt2 == false && currentPlayer.getColor().equals("bleu") || tkt1 == true ) {
                     if (grid[i][j] == '@') {
                         sb.append("\u001b[34m" + grid[i][j] + "\u001b[0m");
-                        System.out.println(grid[i][j]);
                         tkt1 = true;
-
                     } else if (grid[i][j] == '=') {
                         sb.append("\u001b[31m" + grid[i][j] + "\u001b[0m");
-                        System.out.println(grid[i][j]);
                         tkt1 = true;
-
                     } else {
                         sb.append(grid[i][j]);
                     }
@@ -61,12 +56,10 @@ public class Grid {
                 if (tkt1 == false && currentPlayer.getColor().equals("rouge") || tkt2 == true ) {
                     if (grid[i][j] == '@') {
                         sb.append("\u001b[31m" + grid[i][j] + "\u001b[0m");
-                        System.out.println(grid[i][j]);
                         tkt2 = true;
 
                     } else if (grid[i][j] == '=') {
                         sb.append("\u001b[34m" + grid[i][j] + "\u001b[0m");
-                        System.out.println(grid[i][j]);
                         tkt2 = true;
 
                     } else {

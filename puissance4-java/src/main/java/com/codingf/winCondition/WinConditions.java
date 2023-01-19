@@ -53,17 +53,6 @@ public class WinConditions {
     public static boolean winConditionDABD(char[][] grid){
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
-<<<<<<< HEAD
-                int consecutiveDABD = 0;
-                if (i + 3 < 6 && j + 3 < 7 && Fuite == false) {
-                    for (int k = 0; k <= 3; k++) {
-                        if (grid[i + k][j + k] == '@') {
-                            consecutiveDABD++;
-                        }
-                    }
-                    if (consecutiveDABD == 4) {
-                        System.out.println("Victoire sur la ligne diagonale @" + (j + 1));
-=======
                 int winDataDABD = 0;
                 if (i + 3 < 6 && j + 3 < 7 && Fuite == false) {
                     for (int k = 0; k <= 3; k++) {
@@ -74,7 +63,6 @@ public class WinConditions {
                     if (winDataDABD == 4) {
                         Grid.generateGridStringFinish(grid,i,j,i+1,j+1,i+2,j+2,i+3,j+3);
                         System.out.println("Victoire sur la ligne diagonale bas droite @ " + (j + 1));
->>>>>>> origin/Flo2
                         Fuite = true;
                         return true;
                     }
@@ -82,181 +70,22 @@ public class WinConditions {
             }
         }
         return false;
-<<<<<<< HEAD
-=======
-    }
-
-
-        public static boolean winConditionDXBD(char[][] grid){
-            for (int i = 0; i < 6; i++) {
-                for (int j = 0; j < 7; j++) {
-                    int winDataDXBD = 0;
-                    if (i + 3 < 6 && j + 3 < 7 && Fuite == false) {
-                        for (int k = 0; k <= 3; k++) {
-                            if (grid[i + k][j + k] == '=') {
-                                winDataDXBD++;
-                            }
-                        }
-                        if (winDataDXBD == 4) {
-                            Grid.generateGridStringFinish(grid,i,j,i+1,j+1,i+2,j+2,i+3,j+3);
-                            System.out.println("Victoire sur la ligne diagonale bas droite = " + (j + 1));
-                            Fuite = true;
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-        public static boolean winConditionDABG(char[][] grid){
-            for (int i = 0; i < 6; i++) {
-                for (int j = 0; j < 7; j++) {
-                    int winDataDABG = 0;
-                    if (i - 3 >= 0 && j - 3 >= 0 && Fuite == false) {
-                        for (int k = 0; k <= 3; k++) {
-                            if (grid[i - k][j - k] == '@') {
-                                winDataDABG++;
-                            }
-                        }
-                        if (winDataDABG == 4) {
-                            Grid.generateGridStringFinish(grid,i,j,i-1,j-1,i-2,j-2,i-3,j-3);
-                            System.out.println("Victoire sur la ligne diagonale bas gauche @ " + (j + 1));
-                            Fuite = true;
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-
-        public static boolean winConditionDXBG(char[][] grid){
-            for (int i = 0; i < 6; i++) {
-                for (int j = 0; j < 7; j++) {
-                    int winDataDXBG = 0;
-                    if (i - 3 >= 0 && j - 3 >= 0 && Fuite == false) {
-                        for (int k = 0; k <= 3; k++) {
-                            if (grid[i - k][j - k] == '=') {
-                                winDataDXBG++;
-
-                            }
-                        }
-                        if (winDataDXBG == 4) {
-                            Grid.generateGridStringFinish(grid,i,j,i-1,j-1,i-2,j-2,i-3,j-3);
-                            System.out.println("Victoire sur la ligne diagonale bas gauche = " + (j + 1));
-                            Fuite = true;
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-
-        public static boolean winConditionDAHD(char[][] grid){
-            for (int i = 0; i < 6; i++) {
-                for (int j = 0; j < 7; j++) {
-                    int winDataDAHD = 0;
-                    if (i - 3 >= 0 && j + 3 < 7 && Fuite == false) {
-                        for (int k = 0; k <= 3; k++) {
-                            if (grid[i - k][j + k] == '@') {
-                                winDataDAHD++;
-                            }
-                        }
-                        if (winDataDAHD == 4) {
-                            Grid.generateGridStringFinish(grid,i,j,i-1,j+1,i-2,j+2,i-3,j+3);
-                            System.out.println("Victoire sur la ligne diagonale haute droite @ " + (j + 1));
-                            Fuite = true;
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-
-
-        public static boolean winConditionDXHD(char[][] grid){
-            for (int i = 0; i < 6; i++) {
-                for (int j = 0; j < 7; j++) {
-                    int winDataDXHD = 0;
-                    if (i - 3 >= 0 && j + 3 < 7 && Fuite == false) {
-                        for (int k = 0; k <= 3; k++) {
-                            if (grid[i - k][j + k] == '=') {
-                                winDataDXHD++;
-                            }
-                        }
-                        if (winDataDXHD == 4) {
-                            Grid.generateGridStringFinish(grid,i,j,i-1,j+1,i-2,j+2,i-3,j+3);
-                            System.out.println("Victoire sur la ligne diagonale haute droite = " + (j + 1));
-                            Fuite = true;
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-        public static boolean winConditionDAHG(char[][] grid){
-            for (int i = 0; i < 6; i++) {
-                for (int j = 0; j < 7; j++) {
-                    int winDataDAHG = 0;
-                    if (i + 3 < 6 && j - 3 >= 0 && Fuite == false) {
-                        for (int k = 0; k <= 3; k++) {
-                            if (grid[i + k][j - k] == '@') {
-                                winDataDAHG++;
-                            }
-                        }
-                        if (winDataDAHG == 4) {
-                            Grid.generateGridStringFinish(grid,i,j,i+1,j-1,i+2,j-2,i+3,j-3);
-                            System.out.println("Victoire sur la ligne diagonale haute gauche @ " + (j + 1));
-                            Fuite = true;
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-
-        public static boolean winConditionDXHG(char[][] grid){
-            for (int i = 0; i < 6; i++) {
-                for (int j = 0; j < 7; j++) {
-                    int winDataDXHG = 0;
-                    if (i + 3 < 6 && j - 3 >= 0 && Fuite == false) {
-                        for (int k = 0; k <= 3; k++) {
-                            if (grid[i + k][j - k] == '=') {
-                                winDataDXHG++;
-                            }
-                        }
-                        if (winDataDXHG == 4) {
-                            System.out.println("Victoire sur la ligne diagonale haute gauche = " + (j + 1));
-                            Fuite = true;
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-
-
->>>>>>> origin/Flo2
     }
 
 
     public static boolean winConditionDXBD(char[][] grid){
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
-                int consecutiveDXBD = 0;
+                int winDataDXBD = 0;
                 if (i + 3 < 6 && j + 3 < 7 && Fuite == false) {
                     for (int k = 0; k <= 3; k++) {
                         if (grid[i + k][j + k] == '=') {
-                            consecutiveDXBD++;
+                            winDataDXBD++;
                         }
                     }
-                    if (consecutiveDXBD == 4) {
-                        System.out.println("Victoire sur la ligne diagonale = " + (j + 1));
+                    if (winDataDXBD == 4) {
+                        Grid.generateGridStringFinish(grid,i,j,i+1,j+1,i+2,j+2,i+3,j+3);
+                        System.out.println("Victoire sur la ligne diagonale bas droite = " + (j + 1));
                         Fuite = true;
                         return true;
                     }
@@ -268,14 +97,15 @@ public class WinConditions {
     public static boolean winConditionDABG(char[][] grid){
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
-                int consecutiveDABG = 0;
+                int winDataDABG = 0;
                 if (i - 3 >= 0 && j - 3 >= 0 && Fuite == false) {
                     for (int k = 0; k <= 3; k++) {
                         if (grid[i - k][j - k] == '@') {
-                            consecutiveDABG++;
+                            winDataDABG++;
                         }
                     }
-                    if (consecutiveDABG == 4) {
+                    if (winDataDABG == 4) {
+                        Grid.generateGridStringFinish(grid,i,j,i-1,j-1,i-2,j-2,i-3,j-3);
                         System.out.println("Victoire sur la ligne diagonale bas gauche @ " + (j + 1));
                         Fuite = true;
                         return true;
@@ -289,14 +119,16 @@ public class WinConditions {
     public static boolean winConditionDXBG(char[][] grid){
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
-                int consecutiveDXBG = 0;
+                int winDataDXBG = 0;
                 if (i - 3 >= 0 && j - 3 >= 0 && Fuite == false) {
                     for (int k = 0; k <= 3; k++) {
                         if (grid[i - k][j - k] == '=') {
-                            consecutiveDXBG++;
+                            winDataDXBG++;
+
                         }
                     }
-                    if (consecutiveDXBG == 4) {
+                    if (winDataDXBG == 4) {
+                        Grid.generateGridStringFinish(grid,i,j,i-1,j-1,i-2,j-2,i-3,j-3);
                         System.out.println("Victoire sur la ligne diagonale bas gauche = " + (j + 1));
                         Fuite = true;
                         return true;
@@ -310,14 +142,15 @@ public class WinConditions {
     public static boolean winConditionDAHD(char[][] grid){
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
-                int consecutiveDAHD = 0;
+                int winDataDAHD = 0;
                 if (i - 3 >= 0 && j + 3 < 7 && Fuite == false) {
                     for (int k = 0; k <= 3; k++) {
                         if (grid[i - k][j + k] == '@') {
-                            consecutiveDAHD++;
+                            winDataDAHD++;
                         }
                     }
-                    if (consecutiveDAHD == 4) {
+                    if (winDataDAHD == 4) {
+                        Grid.generateGridStringFinish(grid,i,j,i-1,j+1,i-2,j+2,i-3,j+3);
                         System.out.println("Victoire sur la ligne diagonale haute droite @ " + (j + 1));
                         Fuite = true;
                         return true;
@@ -332,14 +165,15 @@ public class WinConditions {
     public static boolean winConditionDXHD(char[][] grid){
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
-                int consecutiveDXHD = 0;
+                int winDataDXHD = 0;
                 if (i - 3 >= 0 && j + 3 < 7 && Fuite == false) {
                     for (int k = 0; k <= 3; k++) {
                         if (grid[i - k][j + k] == '=') {
-                            consecutiveDXHD++;
+                            winDataDXHD++;
                         }
                     }
-                    if (consecutiveDXHD == 4) {
+                    if (winDataDXHD == 4) {
+                        Grid.generateGridStringFinish(grid,i,j,i-1,j+1,i-2,j+2,i-3,j+3);
                         System.out.println("Victoire sur la ligne diagonale haute droite = " + (j + 1));
                         Fuite = true;
                         return true;
@@ -352,14 +186,15 @@ public class WinConditions {
     public static boolean winConditionDAHG(char[][] grid){
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
-                int consecutiveDAHG = 0;
+                int winDataDAHG = 0;
                 if (i + 3 < 6 && j - 3 >= 0 && Fuite == false) {
                     for (int k = 0; k <= 3; k++) {
                         if (grid[i + k][j - k] == '@') {
-                            consecutiveDAHG++;
+                            winDataDAHG++;
                         }
                     }
-                    if (consecutiveDAHG == 4) {
+                    if (winDataDAHG == 4) {
+                        Grid.generateGridStringFinish(grid,i,j,i+1,j-1,i+2,j-2,i+3,j-3);
                         System.out.println("Victoire sur la ligne diagonale haute gauche @ " + (j + 1));
                         Fuite = true;
                         return true;
@@ -373,14 +208,14 @@ public class WinConditions {
     public static boolean winConditionDXHG(char[][] grid){
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
-                int consecutiveDXHG = 0;
+                int winDataDXHG = 0;
                 if (i + 3 < 6 && j - 3 >= 0 && Fuite == false) {
                     for (int k = 0; k <= 3; k++) {
                         if (grid[i + k][j - k] == '=') {
-                            consecutiveDXHG++;
+                            winDataDXHG++;
                         }
                     }
-                    if (consecutiveDXHG == 4) {
+                    if (winDataDXHG == 4) {
                         System.out.println("Victoire sur la ligne diagonale haute gauche = " + (j + 1));
                         Fuite = true;
                         return true;

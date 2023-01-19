@@ -4,11 +4,11 @@ package com.codingf.game;
 
 import com.codingf.grid.Grid;
 import com.codingf.ia.Ia1;
-import com.codingf.ia.Ia2;
+import com.codingf.ia.Ia3;
 import com.codingf.input.Input;
 import com.codingf.player.Player;
+import com.codingf.top10.Top10;
 import com.codingf.winCondition.WinConditions;
-import com.codingf.grid.Grid;
 
 
 import java.util.Scanner;
@@ -19,14 +19,16 @@ public class Game {
     private Grid grid;
     private Player player1;
     private Player player2;
+    int score1;
+    int score2;
+
     private Player currentPlayer;
     int result;
     String name;
-<<<<<<< HEAD
-=======
+
     boolean remake = false;
 
->>>>>>> origin/Flo2
+
     public Game() {
         this.grid = new Grid();
         this.player1 = new Player(0, '@');
@@ -69,10 +71,10 @@ public class Game {
 
 
     public void start() {
-        /*Player.setPlayerName(player1);
+        Player.setPlayerName(player1);
         Player.setPlayerColor(player1);
         Player.setPlayerName(player2);
-        Player.setPlayerColor(player2); */
+        Player.setPlayerColor(player2);
         Game game = new Game();
         currentPlayer = this.player1;
         char[][] grille = grid.generateGridSpace();
@@ -104,12 +106,30 @@ public class Game {
             }
             //Grid.colorize(grille);
 
+            if (this.currentPlayer.equals(this.player1)){
+                score1+=1;
+            }else {
+                score2+=1;
+            }
 
             grid.place(grille, result, game, this.currentPlayer);
             if (callAll(grille)){
                 displayWinner(this.currentPlayer);
                 break;
             }
+
+            if(this.currentPlayer.equals(this.player1)){
+                Top10.writeTop10(this.currentPlayer.name,score1);
+                score1 = 0;
+                score2 = 0;
+            }else {
+                Top10.writeTop10(this.currentPlayer.name , score2);
+                score1 = 0;
+                score2 = 0;
+            }
+
+
+
 
 
             swapTurn();
@@ -148,13 +168,30 @@ public class Game {
                 continue;
             }
             //Grid.colorize(grille);
-
+            if (this.currentPlayer.equals(this.player1)){
+                score1+=1;
+            }else {
+                score2+=1;
+            }
 
             grid.place(grille, result, game, this.currentPlayer);
             if (callAll(grille)){
-                displayWinner(this.currentPlayer);
+                if (this.currentPlayer.equals(this.player1)){
+                    displayWinner(this.currentPlayer);
+                    Top10.writeTop10(this.currentPlayer.name,score1);
+                    score1 = 0;
+                    score2 = 0;
+                }else {
+                    displayWinner(this.currentPlayer);
+                    Top10.writeTop10(this.currentPlayer.name , score2);
+                    score1 = 0;
+                    score2 = 0;
+                }
+
                 break;
             }
+
+
 
 
 
@@ -195,31 +232,35 @@ public class Game {
                 continue;
             }
             swapTurn();
+
             //Grid.colorize(grille);
             grid.place(grille, result, game, this.currentPlayer);
             if (callAll(grille)){
                 displayWinner(this.currentPlayer);
-
                 break;
             }
             swapTurn();
             grid.place(grille, Ia1.ia1(grille), game, this.currentPlayer);
-             if (callAll(grille)){
-                 displayWinner(this.currentPlayer);
-                 break;
-             }
+            if (callAll(grille)){
+
+                    displayWinner(this.currentPlayer);
+
+                break;
+            }
 
 
 
         }
     }
 
-    public void startIa2() {
+    public void startIa3() {
+        Player.setPlayerColorAi(player1);
+        Player.setPlayerColorAi(player2);
         // Initialisation du jeu
         Game game = new Game();
         currentPlayer = this.player2;
         char[][] grille = grid.generateGridSpace();
-        System.out.println(grid.generateGridString(grille));
+        System.out.println(grid.generateGridString(grille,this.currentPlayer));
         while (true) {
 
             System.out.print("colone :  ");
@@ -241,19 +282,19 @@ public class Game {
                 continue;
             }
             swapTurn();
+
             //Grid.colorize(grille);
             grid.place(grille, result, game, this.currentPlayer);
             if (callAll(grille)){
-                displayWinner(this.currentPlayer);
+                    displayWinner(this.currentPlayer);
                 break;
             }
             swapTurn();
-            grid.place(grille, Ia2.ia2(grille,this.currentPlayer), game, this.currentPlayer);
+            grid.place(grille, Ia3.ia3(grille,this.currentPlayer), game, this.currentPlayer);
             if (callAll(grille)){
                 displayWinner(this.currentPlayer);
                 break;
             }
-
         }
     }
 

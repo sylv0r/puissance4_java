@@ -1,5 +1,7 @@
 package com.codingf.top10;
 
+import com.codingf.player.Player;
+
 import java.io.*;
 import java.util.*;
 
@@ -18,8 +20,7 @@ public class Top10 {
                 System.out.println(infos[0] + " a gagné en " + infos[1] + " coups");
             }
 
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println("NON");
         }
 
@@ -27,23 +28,15 @@ public class Top10 {
 
     // écriture dans le fichier
 
-    public static void writeTop10() {
+    public static void writeTop10(String name, int score) {
 
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("top10.txt"));
-            File top10 = new File("../top10.txt");
-            BufferedWriter sortie;
-            if (top10.exists()) {
-                sortie = new BufferedWriter(new FileWriter("top10.txt"));
-            } else {
-                sortie = new BufferedWriter(new FileWriter("top10.txt", true));
-            }
-            sortie.write("bastien" + " : " + "5" + "\n");
+            BufferedWriter sortie = new BufferedWriter(new FileWriter("top10.txt", true));
+            sortie.write(name + " : " + score + "\n");
             sortie.close();
         } catch (
                 IOException e) {
             System.out.println("ca marche pas");
         }
     }
-
 }
