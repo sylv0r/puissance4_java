@@ -216,6 +216,7 @@ public class WinConditions {
                         }
                     }
                     if (winDataDXHG == 4) {
+                        Grid.generateGridStringFinish(grid,i,j,i+1,j-1,i+2,j-2,i+3,j-3);
                         System.out.println("Victoire sur la ligne diagonale haute gauche = " + (j + 1));
                         Fuite = true;
                         return true;

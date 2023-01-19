@@ -41,13 +41,16 @@ public class Grid {
             for (j = 0; j < 7; ++j) {
                 sb.append("│ ");
 
+
                 if (tkt2 == false && currentPlayer.getColor().equals("bleu") || tkt1 == true ) {
                     if (grid[i][j] == '@') {
                         sb.append("\u001b[34m" + grid[i][j] + "\u001b[0m");
                         tkt1 = true;
+
                     } else if (grid[i][j] == '=') {
                         sb.append("\u001b[31m" + grid[i][j] + "\u001b[0m");
                         tkt1 = true;
+
                     } else {
                         sb.append(grid[i][j]);
                     }
@@ -152,26 +155,6 @@ public class Grid {
 
 
 
-    /*public static String generateGridStringFinish(char[][] grid, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
-        StringBuilder sb = new StringBuilder();
-
-        int i;
-        int j;
-
-        for(i = 0; i < 6; ++i) {
-            for (j = 0; j < 7; ++j) {
-                if((i == x1 && j == y1) || (i == x2 && j == y2) || (i == x3 && j == y3) || (i == x4 && j == y4)){
-                    sb.append("\u001b[33m" + grid[i][j] + "\u001b[0m");
-                }else{
-                    sb.append(grid[i][j]);
-                }
-            }
-        }
-        System.out.println(sb.toString());
-        return sb.toString();
-    }*/
-
-
 
     public static char[][] generateGridSpace() {
         char[][] grid = new char[6][7];
@@ -187,20 +170,3 @@ public class Grid {
 }
 
 
-
-
-
-/*                 System.out.println(currentPlayer.getColor());
-                if (grid[i][j] == '@' && currentPlayer.getColor().equals("bleu")) {
-                    if(currentPlayer.getColor().equals("bleu") && grid[i][j] == '@'){
-                        sb.append("\u001b[34m" + grid[i][j] + "\u001b[0m");
-                    }
-                }else if (grid[i][j] == '=' && currentPlayer.getColor().equals("rouge")) {
-                    System.out.println(grid[i][j]);
-                    if (currentPlayer.getColor().equals("rouge") && grid[i][j] == '=') {
-                        sb.append("\u001b[31m" + grid[i][j] + "\u001b[0m");
-                        System.out.println(grid[i][j]);
-                    }
-                } else {
-                    sb.append(grid[i][j]);
-                } */

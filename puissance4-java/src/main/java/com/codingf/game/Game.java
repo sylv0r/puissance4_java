@@ -298,7 +298,6 @@ public class Game {
         }
     }
 
-
     // FONCTION DES WINS CONDITIONS
     public boolean callAll(char[][] grille) {
         if (WinConditions.winConditionVerticale(grille)) {

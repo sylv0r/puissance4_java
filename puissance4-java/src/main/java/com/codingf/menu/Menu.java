@@ -15,7 +15,7 @@ public class Menu {
             System.out.println("Menu:");
             System.out.println("1. Jouer contre l'IA");
             System.out.println("2. Jouer à 2");
-            System.out.println("3. Le top 10");
+            System.out.println("3. Score ");
             System.out.println("4. Rejouer");
             System.out.println("5. QUITTER");
             System.out.print("Votre choix : ");
