@@ -27,7 +27,7 @@ public class Menu {
                 case 2:
                     System.out.println("Vous avez choisi l'option 2.");
 
-                    //game.startIa2();
+                    game.startIa2();
                     break;
                 case 3:
                     System.out.println("Vous avez choisi l'option 3.");
