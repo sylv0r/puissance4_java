@@ -2,6 +2,7 @@ package com.codingf.winCondition;
 
 
 import com.codingf.grid.Grid;
+import com.codingf.player.Player;
 
 public class WinConditions {
 
@@ -34,7 +35,6 @@ public class WinConditions {
                 if (grid[i][j] == '@' && grid[i][j + 1] == '@' && grid[i][j + 2] == '@' && grid[i][j + 3] == '@') {
                     System.out.println("Victoire sur la ligne A " + (i + 1));
                     Grid.generateGridStringFinish(grid,i,j,i,j+1,i,j+2,i,j+3);
-                    //Grid.generateGridStringFinish(grid,grid[i][j], grid[i][j + 1] , grid[i][j + 2], grid[i][j + 3]);
                     return true;
                 }
                 if (grid[i][j] == '=' && grid[i][j + 1] == '=' && grid[i][j + 2] == '=' && grid[i][j + 3] == '=') {

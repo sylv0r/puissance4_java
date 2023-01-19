@@ -21,6 +21,7 @@ public class Game {
     private Player currentPlayer;
     int result;
     String name;
+    boolean remake = false;
 
     public Game() {
         this.grid = new Grid();
@@ -28,7 +29,9 @@ public class Game {
         this.player2 = new Player(1, '=');
     }
 
+
     private void swapTurn() {
+
         if (this.currentPlayer.equals(this.player1)) {
             this.currentPlayer = this.player2;
 
@@ -62,7 +65,52 @@ public class Game {
         Game game = new Game();
         currentPlayer = this.player1;
         char[][] grille = grid.generateGridSpace();
-        System.out.println(generateGridString(grille));
+        System.out.println(generateGridString(grille, currentPlayer));
+
+
+        while (true) {
+            System.out.print(this.currentPlayer.name + " choisi une colone :  ");
+
+            Scanner console = new Scanner(System.in);
+
+            name = console.nextLine();
+
+            try {
+                result = Integer.parseInt(name);
+                if (!Input.verrifInput(result)) {
+                    System.out.println("veillez choisir un nombre entre 1 et 7");
+                    continue;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Erreur, il faut entrer un nombre entier");
+                continue;
+            }
+
+            if (!Input.verrifInput(result)) {
+                System.out.println("veillez choisir un nombre entre 1 et 7");
+
+                continue;
+            }
+            //Grid.colorize(grille);
+
+
+            grid.place(grille, result, game, this.currentPlayer);
+            if (callAll(grille)){
+                displayWinner(this.currentPlayer);
+                break;
+            }
+
+
+            swapTurn();
+
+
+        }
+    }
+    public void restart() {
+        Game game = new Game();
+        currentPlayer = this.player1;
+        char[][] grille = grid.generateGridSpace();
+        System.out.println(generateGridString(grille, currentPlayer));
 
 
         while (true) {
@@ -107,10 +155,14 @@ public class Game {
     }
 
     public void startIa1() {
+        Player.setPlayerName(player1);
+        Player.setPlayerColor(player1);
+        Player.setPlayerName(player2);
+        Player.setPlayerColor(player2);
         Game game = new Game();
         currentPlayer = this.player1;
         char[][] grille = grid.generateGridSpace();
-        System.out.println(generateGridString(grille));
+        System.out.println(generateGridString(grille, currentPlayer));
 
 
         while (true) {
