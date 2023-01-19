@@ -1,0 +1,249 @@
+La classe Game est utilisée pour gérer le déroulement du jeu. Elle contient des informations sur la grille de jeu, les joueurs, le joueur actuel, le résultat et le nom. Elle a des méthodes pour changer de tour de jeu, afficher le gagnant, démarrer le jeu et démarrer le jeu avec l'IA niveau 1.
+
+Méthodes
+swapTurn() : Cette méthode permet de changer de tour de jeu en alternant entre les joueurs 1 et 2.
+
+actualPlayer(Player play) : Cette méthode retourne le jeton (pion) du joueur actuel.
+
+displayWinner(Player winner) : Cette méthode affiche le gagnant en utilisant le nom et la couleur du joueur gagnant.
+
+start() : Cette méthode démarre le jeu en demandant au joueur actuel de choisir une colonne, vérifiant l'entrée du joueur, plaçant le jeton du joueur actuel sur la grille de jeu et vérifiant les conditions de victoire. Elle utilise également la méthode swapTurn() pour changer de tour de jeu.
+
+startIa1() : Cette méthode est similaire à la méthode start(), mais elle utilise l'IA niveau 1 . Elle utilise également la méthode swapTurn() pour changer de tour de jeu.
+
+startIa2() : Cette méthode est similaire à la méthode startIa1(), mais elle utilise l'IA niveau 2 . Elle utilise également la méthode swapTurn() pour changer de tour de jeu.
+
+displayWinner(Player winner) : Cette méthode affiche le gagnant en utilisant le nom et la couleur du joueur gagnant.
+
+Attributs
+grid : Cet attribut contient une instance de la classe Grid qui gère la grille de jeu.
+
+player1 : Cet attribut contient une instance de la classe Player qui gère les informations du joueur 1.
+
+player2 : Cet attribut contient une instance de la classe Player qui gère les informations du joueur 2.
+
+currentPlayer : Cet attribut contient une instance de la classe Player qui gère le joueur actuel.
+
+result : Cet attribut contient le résultat de l'entrée du joueur (la colonne choisie).
+
+name : Cet attribut contient le nom de l'entrée du joueur (utilisé pour demander le nom du joueur).
+
+score1 et score2 : Ces attributs contiennent les scores des joueurs 1 et 2 respectivement.
+
+remake : Cet attribut détermine si le jeu doit être rejoué ou non.
+
+
+
+
+
+
+
+La classe Grid est utilisée pour gérer la grille de jeu. Elle contient des méthodes pour générer la grille de jeu en chaîne de caractères, placer un jeton sur la grille de jeu, réinitialiser les jetons et générer la grille de jeu avec les jetons gagnants en surbrillance.
+
+Méthodes
+generateGridString(char[][] grid, Player currentPlayer) : Cette méthode génère la grille de jeu en chaîne de caractères avec les jetons colorés en fonction du joueur actuel.
+
+place(char[][] grid, int result, Game game, Player currentPlayer) : Cette méthode place le jeton du joueur actuel sur la grille de jeu à la colonne spécifiée.
+
+generateGridStringFinish(char[][] grid, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) : Cette méthode génère la grille de jeu en chaîne de caractères avec les jetons gagnants en surbrillance.
+
+resetTkt() : Cette méthode réinitialise les jetons.
+
+Attributs
+age : Cet attribut contient l'âge de la grille.
+
+player1 : Cet attribut contient une instance de la classe Player qui gère les informations du joueur 1.
+
+player2 : Cet attribut contient une instance de la classe Player qui gère les informations du joueur 2.
+
+tkt1 : Cet attribut contient une valeur booléenne pour indiquer si le jeton 1 a été utilisé.
+
+tkt2 : Cet attribut contient une valeur booléenne pour indiquer si le jeton 2 a été utilisé.
+
+
+
+
+
+
+
+La classe Token est utilisée pour gérer les jetons (pions) utilisés dans le jeu. Elle contient un champ pour le caractère représentant le jeton et un champ pour le propriétaire du jeton (un objet Player). Elle a un constructeur pour initialiser ces champs et des méthodes pour obtenir le propriétaire du jeton.
+
+Méthodes
+getOwner() : Cette méthode retourne le propriétaire du jeton.
+
+Attributs
+tokenChar : Cet attribut contient le caractère représentant le jeton.
+
+owner : Cet attribut contient une instance de la classe Player qui gère les informations du propriétaire du jeton.
+
+
+
+
+
+
+
+
+
+La classe Ia1 est utilisée pour gérer l'IA niveau 1 du jeu. Elle contient une méthode pour sélectionner aléatoirement une colonne disponible sur la grille de jeu.
+
+Méthodes
+ia1(char[][] grille) : Cette méthode sélectionne aléatoirement une colonne disponible sur la grille de jeu en utilisant la classe Random. Elle utilise également la méthode estColonnePleine() pour vérifier si la colonne sélectionnée est pleine avant de la retourner.
+
+estColonnePleine(int colonne, char[][] grid ) : Cette méthode privée vérifie si la colonne passée en paramètre est pleine en parcourant chaque ligne de la colonne et en vérifiant si elle contient un jeton. Elle retourne un booléen indiquant si la colonne est pleine ou non.
+
+Attributs
+Aucun.
+
+
+
+
+
+
+
+
+La classe Ia3 est utilisée pour gérer l'IA de niveau 3 dans un jeu de puissance 4. Elle contient une méthode statique ia3() qui prend en entrée la grille de jeu sous forme de tableau de caractères et l'objet joueur actuel, et renvoie un entier représentant la colonne où l'IA a choisi de placer son jeton.
+
+Méthodes
+
+ia3(char[][] grid, Player currentPlayer) : Cette méthode vérifie si le joueur adverse peut gagner en plaçant un jeton dans une colonne donnée, et place un jeton dans cette colonne pour bloquer la victoire si c'est le cas. Sinon, elle vérifie si l'IA peut gagner en plaçant un jeton dans une colonne donnée, et place un jeton dans cette colonne pour remporter la victoire si c'est le cas. Sinon, elle place un jeton dans une colonne choisie au hasard.
+
+estColonnePleine(int colonne, char[][] grid ) : Cette méthode privée vérifie si la colonne passée en paramètre est pleine en parcourant chaque ligne de la colonne et en vérifiant si elle contient un jeton. Elle retourne un booléen indiquant si la colonne est pleine ou non.
+
+
+Attributs
+Aucun attribut n'est déclaré dans cette classe.
+
+
+
+
+
+
+La classe Input est utilisée pour vérifier la validité des entrées utilisateur. Elle contient une méthode statique pour vérifier si une entrée est valide ou non.
+
+Méthodes
+verrifInput(int result) : Cette méthode statique prend en entrée un entier et vérifie si cet entier est compris entre 1 et 7. Elle retourne un booléen qui indique si l'entrée est valide (true) ou non (false).
+
+Attributs
+Aucun.
+
+
+
+
+
+
+
+La classe Menu est utilisée pour gérer les options du menu du jeu. Elle contient des méthodes pour afficher les options du menu principal et du sous-menu pour jouer contre l'IA, ainsi que pour gérer les choix des utilisateurs.
+
+Méthodes
+menu() : Cette méthode affiche les options du menu principal et gère les choix de l'utilisateur.
+
+menuia() : Cette méthode affiche les options du sous-menu pour jouer contre l'IA et gère les choix de l'utilisateur.
+
+Attributs
+game : Cet attribut contient une instance de la classe Game qui gère les informations de la partie en cours.
+
+scanner : Cet attribut contient une instance de la classe Scanner utilisée pour lire les entrées de l'utilisateur.
+
+choice : Cet attribut contient le choix de l'utilisateur.
+
+
+
+
+
+
+
+
+
+
+
+
+
+La classe Player est utilisée pour gérer les informations des joueurs dans le jeu. Elle contient des méthodes pour définir le nom et la couleur du joueur, ainsi qu'un jeton qui est utilisé pour placer sur la grille de jeu.
+
+Méthodes:
+
+getToken(): Cette méthode renvoie l'instance de la classe Token associée au joueur.
+
+setPlayerName(Player player): Cette méthode permet de définir le nom du joueur en lisant une entrée utilisateur.
+
+setPlayerColor(Player player): Cette méthode permet de définir la couleur du joueur en lisant une entrée utilisateur.
+
+setPlayerColorAi(Player player): Cette méthode permet de définir la couleur du joueur IA.
+
+getColor(): Cette méthode renvoie la couleur du joueur
+
+Attributs:
+
+id: Cet attribut contient l'identifiant du joueur.
+
+token: Cet attribut contient une instance de la classe Token qui est utilisée pour placer des jetons sur la grille de jeu.
+
+name: Cet attribut contient le nom du joueur.
+
+color: Cet attribut contient la couleur du joueur.
+
+defaut : Cet attribut contient un booléen qui indique si c'est un joueur par défaut ou non.
+
+Constructeur : Il prend en paramètre l'identifiant du joueur et un caractère représentant le jeton du joueur. Il initialise les champs id,token en utilisant ces paramètres.
+
+
+
+
+
+
+
+
+
+
+La classe Top10 est utilisée pour gérer le classement des meilleurs scores d'un jeu. Elle contient deux méthodes :
+
+Méthodes
+
+readTop10() : Cette méthode lit le fichier de classement "top10.txt" et affiche les scores enregistrés dans le fichier.
+writeTop10(String name, int score) : Cette méthode écrit les informations du joueur (nom et score) dans le fichier de classement "top10.txt" pour enregistrer son score.
+Attributs
+Il n'y a pas d'attributs dans cette classe.
+
+
+
+
+
+
+
+
+
+
+
+La classe WinConditions est utilisée pour déterminer si un joueur a gagné dans un jeu. Elle contient plusieurs méthodes pour vérifier les différentes conditions de victoire :
+
+Méthodes
+
+winConditionVerticale(char[][] grid) : Cette méthode parcourt le tableau de jeu (grid) pour vérifier s'il existe une combinaison de 4 jetons alignés verticalement. Si c'est le cas, elle affiche un message de victoire et retourne true.
+winConditionHorizontale(char[][] grid) : Cette méthode parcourt le tableau de jeu (grid) pour vérifier s'il existe une combinaison de 4 jetons alignés horizontalement. Si c'est le cas, elle affiche un message de victoire et retourne true.
+winConditionDABD(char[][] grid) : Cette méthode parcourt le tableau de jeu (grid) pour vérifier s'il existe une combinaison de 4 jetons alignés en diagonale de bas à droite. Si c'est le cas, elle affiche un message de victoire et retourne true.
+
+Attributs
+
+Fuite : c'est un booléen qui indique si une victoire a déjà été détectée pour éviter des messages de victoires multiples.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+La classe Main est la classe principale de l'application. Elle contient une méthode principale qui est appelée lorsque le programme est lancé.
+
+Méthodes
+
+main(String[] args) : Cette méthode est la méthode principale de l'application. Elle appelle la méthode menu() de la classe Menu pour lancer le menu principal de l'application.
+
+Attributs
+Il n'y a pas d'attributs dans cette classe.
