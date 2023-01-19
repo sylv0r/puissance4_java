@@ -111,43 +111,6 @@ public class Ia3 {
         }
 
 
-
-    for (int i = 0; i < 6; i++) {
-        for (int j = 0; j < 7; j++) {
-            int consecutiveDABG = 0;
-            if (i - 3 >= 0 && j - 3 >= 0) {
-                for (int k = 0; k <= 2; k++) {
-                    if (grid[i - k][j - k] == '@' || grid[i - k][j - k] == '=') {
-                        consecutiveDABG++;
-                        if (consecutiveDABG == 3) {
-                            //System.out.println("aaaaaa      i-k: " + (i-k)+ "      j-k :    " +(j-k));
-                            if (grid[i - k][j - k -1 ] == '@' || grid[i - k][j -k -1] == '=') {
-                              //  System.out.println("hy");
-                                return   j - k;
-                            }
-                        }
-                    }
-                }
-            }
-            consecutiveDABG = 0;
-            if (i - 3 >= 0 && j + 3 <= 6) {
-                for (int k = 0; k <= 2; k++) {
-                    if (grid[i - k][j + k] == '@' || grid[i - k][j + k] == '=') {
-                        consecutiveDABG++;
-                        if (consecutiveDABG == 3) {
-                            //System.out.println("aaaaaa      i-k: " + (i-k)+ "      j+k :    " +(j+k));
-                            if (grid[i - k][j + k + 1] == '@' || grid[i - k][j + k + 1] == '=') {
-                                //System.out.println("hy");
-                                return   (j + k +2);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 int consecutiveDABG = 0;
@@ -159,7 +122,7 @@ public class Ia3 {
                             consecutiveDABG++;
                             if (consecutiveDABG == 3) {
                                 if (j + k + 1 < 7 && grid[i - k][j + k + 1] == '.') {
-                                    return j + k + 2;
+                                    return j + k + 1;
                                 }
                             }
                         } else {
