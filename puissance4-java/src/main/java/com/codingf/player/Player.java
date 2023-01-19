@@ -55,8 +55,7 @@ public class Player {
     public static void setPlayerColorAi(Player player) {
         while (true) {
             System.out.print("Entrer la couleur du joueur: ");
-            Scanner console = new Scanner(System.in);
-            String colori = console.nextLine();
+            String colori = "rouge";
 
             if (!colori.equals("rouge") && !colori.equals("bleu")) {
                 System.out.println("La couleur doit être 'rouge' ou 'bleu'");

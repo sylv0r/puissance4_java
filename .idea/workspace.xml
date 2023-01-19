@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d21b7f68-30fd-466f-9626-75d2fc918a81" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/game/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/grid/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/grid/Grid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/menu/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/winCondition/WinConditions.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/winCondition/WinConditions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/grid/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/menu/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/winCondition/WinConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/winCondition/WinConditions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/top10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/top10.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

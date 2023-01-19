@@ -155,10 +155,8 @@ public class Game {
     }
 
     public void startIa1() {
-        Player.setPlayerName(player1);
-        Player.setPlayerColor(player1);
-        Player.setPlayerName(player2);
-        Player.setPlayerColor(player2);
+        Player.setPlayerColorAi(player1);
+        Player.setPlayerColorAi(player2);
         Game game = new Game();
         currentPlayer = this.player1;
         char[][] grille = grid.generateGridSpace();
