@@ -11,7 +11,8 @@ public class Ia2 {
     public static int ia2(char[][] grid, Player currentPlayer) {
         // On commence par vérifier si le joueur adverse peut gagner en plaçant un jeton
         // dans une colonne donnée
-        /*for (int j = 0; j < 7; j++) {
+
+        for (int j = 0; j < 7; j++) {
             for (int i = 0; i < 6; i++) {
                 if(grid[0][j] == '@' || grid[0][j] == '='){
                 }else {
@@ -33,60 +34,136 @@ public class Ia2 {
 
                 if (grid[i][j] == '@' && grid[i][j + 1] == '@' && grid[i][j + 2] == '@' && grid[i][j + 3] == ' ') {
                     if ( i!=5 &&(grid[i+1][j+3] == '@' || grid[i+1][j+3] == '=') && i!=5 ){
-                        System.out.println("heheheha 1");
+                        //System.out.println("heheheha 1");
                         return j+4;
                     }else if (i==5) {
-                        System.out.println("heheheha 11");
+                        //System.out.println("heheheha 11");
                         return j+4;
                     }
                 }
                 if (grid[i][j] == '=' && grid[i][j + 1] == '=' && grid[i][j + 2] == '=' && grid[i][j + 3] == ' ') {
                     if ( i!=5 &&(grid[i+1][j+3] == '@' || grid[i+1][j+3] == '=') && i!=5 ){
-                        System.out.println("heheheha 2");
+                        //System.out.println("heheheha 2");
                         return j+4;
                     }else if (i==5){
-                        System.out.println("heheheha 22");
+                        //System.out.println("heheheha 22");
                         return j+4;
                     }
                 }
                 if (grid[i][j] == ' ' && grid[i][j + 1] == '@' && grid[i][j + 2] == '@' && grid[i][j + 3] == '@'){
                     if ( i!=5 &&( grid[i+1][j] == '@' || grid[i+1][j] == '=') && i!=5 ){
-                        System.out.println("heheheha 3");
+                        //System.out.println("heheheha 3");
                         return j+1;
                     }else if (i==5) {
-                        System.out.println("heheheha 33");
+                        // System.out.println("heheheha 33");
                         return j+1;
                     }
                 }
                 if (grid[i][j] == ' ' && grid[i][j + 1] == '=' && grid[i][j + 2] == '=' && grid[i][j + 3] == '='){
                     if ( i!=5 &&(grid[i+1][j] == '@' || grid[i+1][j] == '=') && i!=5 ){
-                        System.out.println("heheheha 4");
+                        //System.out.println("heheheha 4");
                         return j+1;
                     }else if (i==5){
-                        System.out.println("heheheha 44");
+                        //System.out.println("heheheha 44");
                         return j+1;
                     }
                 }
             }
-        }*/
+        }
         //winConditionDABD
         for (int i = 0; i < 6; i++) {
-            System.out.println("i"+i);
+            //System.out.println("i"+i);
             for (int j = 0; j < 7; j++) {
-                System.out.println("j"+j);
+                //System.out.println("j"+j);
                 int consecutiveDABD = 0;
                 if (i + 3 < 6 && j + 3 < 7 ) {
                     for (int k = 0; k <= 3; k++) {
 
-                        if (grid[i+k][j+k] == '@') {
-                            System.out.println((i+k)+"   "+(j+k)+ "      -----------------");
+                        if (grid[i+k][j+k] == '@' || grid[i+k][j+k] == '=' ) {
+                            //System.out.println((i+k)+"   "+(j+k)+ "      -----------------");
                             consecutiveDABD++;
-                            System.out.println("coooonnnssseeee   "+consecutiveDABD);
-
+                            //System.out.println("coooonnnssseeee   "+consecutiveDABD);
                         }
                         if (consecutiveDABD == 3) {
-                            System.out.println("Victoire sur la ligne diagonale @" + (j + 1));
-                            return j+1 ;
+                            if (grid[i+1][j] == '@' || grid[i+1][j] == '='){
+                                //System.out.println((j+1) + "ia joue");
+                                return j+1 ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //winConditionDAHD
+        for (int i = 0; i < 6; i++) {
+            //System.out.println("i" + i);
+
+            for (int j = 0; j < 7; j++) {
+                int consecutiveDAHD = 0;
+                if (i - 3 >= 0 && j + 3 < 7) {
+                    //System.out.println("j" + j);
+                    for (int k = 0; k <= 3; k++) {
+                        if (grid[i - k][j + k] == '@' || grid[i - k][j + k] == '@') {
+                            //System.out.println((i - k) + "   " + (j + k) + "      -----------------");
+                            consecutiveDAHD++;
+                            //System.out.println("coooonnnssseeee   " + consecutiveDAHD);
+                        }
+                        if (consecutiveDAHD == 3) {
+                            //System.out.println("hehe");
+                            if (grid[i- k][j+k+1] == '@' || grid[i -k][j +k+ 1] == '=') {
+                                //System.out.println((j + 1) + "ia joue");
+                                return j+ k+2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //winConditionDABG
+        for (int i = 0; i < 6; i++) {
+            //System.out.println("i" + i);
+
+            for (int j = 0; j < 7; j++) {
+                //System.out.println("j" + j);
+
+                int consecutiveDABG = 0;
+                if (i - 3 >= 0 && j - 3 >= 0) {
+                    for (int k = 0; k <= 2; k++) {
+                        if (grid[i - k][j - k] == '@' || grid[i - k][j - k] == '=') {
+                            //System.out.println((i - k) + "   " + (j - k) + "      -----------------");
+                            consecutiveDABG++;
+                            //System.out.println("coooonnnssseeee   " + consecutiveDABG);
+                        }
+                        if (consecutiveDABG == 3) {
+                            //System.out.println((i -k)+"  "+(j-k -1 ));
+                            //System.out.println((i)+"  "+(j ));
+                            if (grid[i - k][j - k -1 ] == '@' || grid[i - k][j -k -1] == '=') {
+                                //System.out.println((j) + "ia joue");
+                                return j - k ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < 6; i++) {
+            //System.out.println("i" + i);
+            for (int j = 0; j < 7; j++) {
+                //System.out.println("j" + j);
+                int consecutiveDABG = 0;
+                if (i - 3 >= 0 && j - 3 >= 0) {
+                    for (int k = 0; k <= 3; k++) {
+                        if (grid[i - k][j - k] == '@' || grid[i - k][j - k] == '=') {
+                            //System.out.println((i + k) + "   " + (j + k) + "      -----------------");
+                            consecutiveDABG++;
+                            //System.out.println("coooonnnssseeee   " + consecutiveDABG);
+                        }
+
+                        if (consecutiveDABG == 3) {
+                            if (grid[i][j+1] == '@' || grid[i][j+1] == '=') {
+                                //System.out.println((j + 1) + "ia joue");
+                                return j+1;
+                            }
                         }
                     }
                 }
@@ -119,70 +196,4 @@ public class Ia2 {
         }
         return true;
     }
-
-
-    //static boolean Fuite = false;
-    // CONDITIONS DE VICTOIRE IA 2
-    public static int winConditionVerticaleIa2(char[][] grid) {
-        for (int j = 0; j < 7; j++) {
-            for (int i = 0; i < 3; i++) {
-                System.out.println("aaaaaaaaaaaaaaaaa");
-                if (grid[i][j] == '@' && grid[i + 1][j] == '@' && grid[i + 2][j] == '@') {
-                    System.out.println("---------------------------------");
-                    System.out.println("Possibilité de victoire en" + grid[i + 3][j]);
-                    //Grid.place(grid, j, game, player);
-                    return j;
-                }
-                if (grid[i][j] == '=' && grid[i + 1][j] == '=' && grid[i + 2][j] == '=') {
-                    System.out.println("Possibilité de victoire en" + grid[i + 3][j]);
-                    //Grid.place(grid, j, game, player);
-                    return j;
-                }
-            }
-        }
-        return 10;
-    }
-/*
-    public static boolean winConditionHorizontaleIa2(char[][] grid) {
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 4; j++) {
-                if (grid[i][j] == '@' && grid[i][j + 1] == '@' && grid[i][j + 2] == '@') {
-                    System.out.println("Possibilité de victoire en" + grid[i + 3][j]);
-                }
-                if (grid[i][j] == '=' && grid[i][j + 1] == '=' && grid[i][j + 2] == '=') {
-                    System.out.println("Possibilité de victoire en" + grid[i + 3][j]);
-
-                }
-            }
-        }
-    }
-    public static boolean winConditionDABDIa2(char[][] grid) {
-
-    }
-
-    public static boolean winConditionDXBD(char[][] grid) {
-
-    }
-
-    public static boolean winConditionDABG(char[][] grid) {
-
-    }
-
-    public static boolean winConditionDXBG(char[][] grid) {
-
-    }
-
-    public static boolean winConditionDAHD(char[][] grid) {
-
-    }
-
-    public static boolean winConditionDAHG(char[][] grid) {
-
-    }
-
-    public static boolean winConditionDXHG(char[][] grid) {
-
-    }
-
-*/
 }

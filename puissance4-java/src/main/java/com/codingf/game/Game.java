@@ -111,13 +111,13 @@ public class Game {
 
     public void startIa1() {
         Game game = new Game();
-        currentPlayer = this.player1;
+        currentPlayer = this.player2;
         char[][] grille = grid.generateGridSpace();
         System.out.println(grid.generateGridString(grille));
 
 
         while (true) {
-            swapTurn();
+
             System.out.print("colone :  ");
             Scanner console = new Scanner(System.in);
             name = console.nextLine();
@@ -136,11 +136,8 @@ public class Game {
                 System.out.println("veillez choisir un nombre entre 1 et 7");
                 continue;
             }
-
-
+            swapTurn();
             //Grid.colorize(grille);
-
-
             grid.place(grille, result, game, this.currentPlayer);
             if (callAll(grille)){
                 displayWinner(this.currentPlayer);
@@ -148,7 +145,7 @@ public class Game {
                 break;
             }
             swapTurn();
-            grid.place(grille, Ia2.ia2(grille,this.currentPlayer), game, this.currentPlayer);
+            grid.place(grille, Ia1.ia1(grille), game, this.currentPlayer);
              if (callAll(grille)){
                  displayWinner(this.currentPlayer);
                  break;
@@ -162,41 +159,43 @@ public class Game {
     public void startIa2() {
         // Initialisation du jeu
         Game game = new Game();
-        currentPlayer = this.player1;
+        currentPlayer = this.player2;
         char[][] grille = grid.generateGridSpace();
         System.out.println(grid.generateGridString(grille));
-
         while (true) {
-            if (this.currentPlayer.equals(this.player1)) { // Si c'est le tour du joueur
-                System.out.print(this.currentPlayer.name + " choisi une colone :  ");
-                Scanner console = new Scanner(System.in);
-                name = console.nextLine();
-                try {
-                    result = Integer.parseInt(name);
-                    if (!Input.verrifInput(result)) {
-                        System.out.println("veillez choisir un nombre entre 1 et 7");
-                        continue;
-                    }
-                } catch (NumberFormatException e) {
-                    System.out.println("Erreur, il faut entrer un nombre entier");
+
+            System.out.print("colone :  ");
+            Scanner console = new Scanner(System.in);
+            name = console.nextLine();
+            try {
+                result = Integer.parseInt(name);
+                if (!Input.verrifInput(result)) {
+                    System.out.println("veillez choisir un nombre entre 1 et 7");
                     continue;
                 }
-                grid.place(grille, result, game, this.currentPlayer);
-                if (callAll(grille)){
-                    displayWinner(this.currentPlayer);
-                    break;
-                }
-            } else { // Si c'est le tour de l'IA
+            } catch (NumberFormatException e) {
+                System.out.println("Erreur, il faut entrer un nombre entier");
+                continue;
+            }
 
-                int col = Ia2.ia2(grille,this.currentPlayer );
-                System.out.println("col ===="+ col);
-                grid.place(grille, col, game, this.currentPlayer);
-                if (callAll(grille)){
-                    displayWinner(this.currentPlayer);
-                    break;
-                }
+            if (!Input.verrifInput(result)) {
+                System.out.println("veillez choisir un nombre entre 1 et 7");
+                continue;
             }
             swapTurn();
+            //Grid.colorize(grille);
+            grid.place(grille, result, game, this.currentPlayer);
+            if (callAll(grille)){
+                displayWinner(this.currentPlayer);
+                break;
+            }
+            swapTurn();
+            grid.place(grille, Ia2.ia2(grille,this.currentPlayer), game, this.currentPlayer);
+            if (callAll(grille)){
+                displayWinner(this.currentPlayer);
+                break;
+            }
+
         }
     }
 
