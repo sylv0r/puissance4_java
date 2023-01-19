@@ -1,0 +1,87 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,12 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d21b7f68-30fd-466f-9626-75d2fc918a81" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/production/puissance4_java/com/codingf/menu/Menu.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/menu/Menu.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/top10/Top10.java" beforeDir="false" afterPath="$PROJECT_DIR$/puissance4-java/src/main/java/com/codingf/top10/Top10.java" afterDir="false" />
+-    </list>
++    <list default="true" id="96b5e537-8f4e-4db2-b62b-64c694d47cab" name="Changes" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -32,6 +27,13 @@
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
++  </component>
++  <component name="MavenImportPreferences">
++    <option name="generalSettings">
++      <MavenGeneralSettings>
++        <option name="useMavenConfig" value="true" />
++      </MavenGeneralSettings>
++    </option>
+   </component>
+   <component name="ProjectId" id="2KSEZPWHj7slRUDbkXLCWTJ20Gb" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+@@ -41,24 +43,24 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "/Users/florianrichet/Desktop/01-Ecole/05-Java/puissance4/puissance4_java",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.0",
+-    "settings.editor.selected.configurable": "inlay.hints",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/florianrichet/Desktop/01-Ecole/05-Java/puissance4/puissance4_java&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/puissance4_java/src/main/java/com/codingf" />
+@@ -122,4 +124,7 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
++  </component>
+ </project>
+\ No newline at end of file
