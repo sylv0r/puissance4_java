@@ -61,12 +61,10 @@ public class Grid {
                 if (tkt1 == false && currentPlayer.getColor().equals("rouge") || tkt2 == true ) {
                     if (grid[i][j] == '@') {
                         sb.append("\u001b[31m" + grid[i][j] + "\u001b[0m");
-                        System.out.println(grid[i][j]);
                         tkt2 = true;
 
                     } else if (grid[i][j] == '=') {
                         sb.append("\u001b[34m" + grid[i][j] + "\u001b[0m");
-                        System.out.println(grid[i][j]);
                         tkt2 = true;
 
                     } else {
